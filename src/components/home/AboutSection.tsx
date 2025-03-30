@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutUs() {
   return (
-    <div className='min-h-screen w-full bg-gradient-to-br from-orange-50 via-white to-orange-50'>
+    <div className='w-full bg-gradient-to-br from-orange-50 via-white to-orange-50'>
       <div className='container mx-auto px-4 py-12 md:py-20'>
         <div className='text-center mb-8'>
           <h1 className='text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block'>

@@ -68,7 +68,7 @@ export default function CodesDisplay() {
             {naicsCodes.map((item) => (
               <div
                 key={item.id}
-                className='bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm transition-transform hover:scale-105'
+                className='bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 shadow-sm transition-transform hover:scale-105'
               >
                 <div className='text-center'>
                   <p className='text-[#1A0D05] text-base mb-1'>Code</p>
@@ -95,7 +95,7 @@ export default function CodesDisplay() {
             {pscCodes.map((item) => (
               <div
                 key={item.id}
-                className='bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-4 shadow-sm transition-transform hover:scale-105'
+                className='bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 shadow-sm transition-transform hover:scale-105'
               >
                 <div className='text-center'>
                   <p className='text-[#1A0D05] text-base mb-1'>Code</p>
