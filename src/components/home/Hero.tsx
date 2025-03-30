@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { MobileNav } from "../header/MobileNav";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -78,7 +79,7 @@ const Hero = () => {
           <span className='font-medium'>+1 636-244-3219</span>
         </div>
 
-        {/* <MobileNav /> */}
+        <MobileNav />
       </header>
 
       {/* This section is for the home page */}

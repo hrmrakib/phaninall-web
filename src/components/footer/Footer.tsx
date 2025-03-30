@@ -27,7 +27,7 @@ export default function Footer() {
       </div>
 
       {/* Main footer content */}
-      <div className='relative z-10 bg-[url("/footer-bg.png")] bg-cover bg-center  pt-8 md:pt-12'>
+      <div className='relative z-10 bg-[url("/footer-bg.png")] bg-cover bg-center px-6 md:px-0 pt-8 md:pt-12'>
         <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8'>
           {/* Company info and social */}
           <div className='space-y-6'>
