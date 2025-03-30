@@ -9,7 +9,7 @@ const Hero = () => {
   const pathname = usePathname();
 
   return (
-    <div className='h-[815px] bg-[url("/hero-bg.png")] bg-cover bg-center'>
+    <div className='h-screen bg-[url("/hero-bg.png")] bg-cover bg-center bg-no-repeat'>
       {/* This header is for the home page */}
       <header className='bg-transparent container mx-auto py-4 px-4 flex items-center justify-between'>
         <div className='flex items-center'>
