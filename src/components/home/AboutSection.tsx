@@ -10,7 +10,7 @@ export default function AboutUs() {
           <h1 className='text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block'>
             ABOUT US
           </h1>
-          <div className='h-1 w-16 bg-orange-500 mx-auto mt-2'></div>
+          <div className='h-1 w-16 bg-[#1A0D05] mx-auto mt-2'></div>
         </div>
 
         <div className='text-center max-w-3xl mx-auto mb-16'>
@@ -22,7 +22,7 @@ export default function AboutUs() {
         </div>
 
         <div className='grid md:grid-cols-2 gap-8 items-center'>
-          <div className='relative min-h-[500px] md:min-h-[600px] lg:min-h-[500px] flex flex-col items-center justify-center space-y-6 border-2 border-orange-500 rounded-3xl p-6 shadow-sm'>
+          <div className='relative min-h-[500px] md:min-h-[600px] lg:min-h-[500px] flex flex-col items-center justify-center space-y-6 p-6'>
             {/* User Stats Card */}
             <div className='md:absolute md:top-56 md:left-4 lg:left-16 lg:top-40'>
               <div className='relative w-[264px] h-[146px] bg-[#FFFFFF] flex items-center rounded-xl p-6 shadow-sm'>
@@ -89,14 +89,14 @@ export default function AboutUs() {
               Orange Tech Consultants
             </h2>
 
-            <p className='text-[#4D3A2E] text-xl font-normal mb-4'>
+            <p className='text-[#4D3A2E] text-xl font-normal mb-6'>
               At Orange Tech Consultants, we redefine innovation in technology
               services. Specializing in AI/ML, Generative AI, DevSecOps, Cloud &
               Data Engineering, SRE, and Full Stack Development, we deliver
               cutting-edge solutions for a digital-first world.
             </p>
 
-            <p className='text-gray-700 mb-8'>
+            <p className='text-[#4D3A2E] text-xl font-normal mb-6'>
               We help businesses unlock their potential through custom
               solutions, automation, and modern web applications. With a focus
               on security, scalability, and performance, we navigate challenges
@@ -105,20 +105,23 @@ export default function AboutUs() {
 
             <Link
               href='/about'
-              className='inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors'
+              className='inline-flex w-[189px] h-[50px] items-center justify-center px-6 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors'
             >
-              Read More
+              <span className='mr-2'>Read More</span>
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
+                width='20'
+                height='20'
+                viewBox='0 0 20 20'
                 fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
+                xmlns='http://www.w3.org/2000/svg'
               >
-                <path d='M5 12h14' />
-                <path d='m12 5 7 7-7 7' />
+                <path
+                  d='M1.83337 9.99992H18.1667M18.1667 9.99992L10 1.83325M18.1667 9.99992L10 18.1666'
+                  stroke='white'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                />
               </svg>
             </Link>
           </div>
