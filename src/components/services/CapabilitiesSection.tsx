@@ -92,8 +92,8 @@ export default function CapabilitiesSection() {
                 <Image
                   src={capability.image || "/placeholder.svg"}
                   alt={capability.title}
-                  width={80}
-                  height={80}
+                  width={480}
+                  height={480}
                   className='w-full h-full object-cover'
                 />
               </div>
