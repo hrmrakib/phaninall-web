@@ -50,7 +50,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className='bg-gradient-to-br from-orange-100 via-orange-50 to-orange-100 p-4 md:p-8 relative overflow-hidden'>
+    <div className='bg-gradient-to-br from-orange-100 via-orange-50 to-orange-100 p-4 md:p-8 relative overflow-hidden my-24'>
       <div className='text-center mb-24'>
         <h2 className='text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
           Contact Us
