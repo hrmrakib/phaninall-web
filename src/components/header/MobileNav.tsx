@@ -23,7 +23,7 @@ export function MobileNav() {
         <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
           <div className='flex flex-col h-full'>
             <div className='flex items-center justify-between border-b pb-4'>
-              <div className='flex items-center gap-2'>
+              <Link href={"/"} className='flex items-center gap-2'>
                 <Image
                   src='/logo.svg'
                   alt='Orange Tech Consultants Logo'
@@ -31,7 +31,7 @@ export function MobileNav() {
                   height={40}
                 />
                 <span className='font-semibold'>Orange Tech</span>
-              </div>
+              </Link>
               <Button
                 variant='ghost'
                 size='icon'

@@ -15,8 +15,7 @@ export default function Nav() {
 
   return (
     <header className='bg-transparent container mx-auto py-4 px-4 flex items-center justify-between'>
-
-      <div className='flex items-center'>
+      <Link href={"/"} className='flex items-center'>
         <Image
           src='/logo.svg'
           alt='Orange Tech Consultants Logo'
@@ -24,7 +23,7 @@ export default function Nav() {
           height={250}
           className='w-[100px] h-[42px]'
         />
-      </div>
+      </Link>
 
       <nav className='hidden md:flex items-center space-x-8'>
         <Link
