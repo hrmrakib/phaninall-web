@@ -44,8 +44,8 @@ interface ServiceCardProps {
 
 function ServiceCard({ image, title, subtitle, alt }: ServiceCardProps) {
   return (
-    <div className='border border-gray-200 rounded-2xl p-4 md:p-6 flex items-center justify-between hover:shadow-md transition-shadow duration-300'>
-      <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
+    <div className='bg-[#FFFFFF] border border-[#B29D8F] rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center md:justify-between hover:shadow-md transition-shadow duration-300'>
+      <div className='flex flex-row items-center justify-center gap-4 md:gap-8  self-start md:self-center'>
         <div className='w-24 h-24 md:w-32 md:h-32 relative flex-shrink-0'>
           <Image
             src={image || "/placeholder.svg"}
@@ -60,7 +60,7 @@ function ServiceCard({ image, title, subtitle, alt }: ServiceCardProps) {
         </div>
       </div>
       <button
-        className='w-10 h-10 rotate-45 md:w-12 md:h-12 bg-[#FF6B00] rounded-full flex items-center justify-center flex-shrink-0'
+        className='w-10 h-10 rotate-45 md:w-12 md:h-12 bg-[#FF6B00] rounded-full flex items-center justify-center self-end md:self-center flex-shrink-0'
         aria-label='Learn more'
       >
         <ArrowRight className='w-5 h-5 md:w-6 md:h-6 text-white' />

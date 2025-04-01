@@ -17,7 +17,7 @@ export default function ContactBanner() {
                 <button className='xl:absolute md:top-[8%] lg:top-[18%] left-0 inline-block bg-[#FF6C0A] px-8 py-3 mb-6 text-white text-2xl md:text-[32px] font-bold'>
                   About Us
                 </button>
-                <h1 className='max-w-[600px] text-3xl md:text-5xl text-[#4D3F36] tracking-tight leading-tight'>
+                <h1 className='max-w-[600px] text-3xl md:text-5xl text-[#4D3F36] tracking-tight leading-tight p-2 md:p-0'>
                   Empowering Innovators Through World-Class{" "}
                   <span className='text-gray-900 font-semibold'>
                     ML Education
