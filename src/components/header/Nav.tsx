@@ -14,7 +14,7 @@ export default function Nav() {
   }
 
   return (
-    <header className='bg-transparent container mx-auto py-4 px-4 flex items-center justify-between'>
+    <header className='bg-transparent container mx-auto h-[90px] xl:h-[142px] py-4 px-4 flex items-center justify-between'>
       <Link href={"/"} className='flex items-center'>
         <Image
           src='/logo.svg'

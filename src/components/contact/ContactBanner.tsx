@@ -9,15 +9,15 @@ export default function ContactBanner() {
   return (
     <div className='w-full'>
       {/* Main banner */}
-      <div className='relative bg-[#FFFFFF] overflow-hidden'>
+      <div className='relative h-[500px] md:h-[512px] bg-[#FFFFFF] overflow-hidden'>
         <div className='container mx-auto'>
-          <div className='z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32'>
+          <div className='z-10 pb-8 bg-white'>
             <div className='flex flex-col md:flex-row items-center justify-between'>
               <div className='sm:text-center md:text-left '>
-                <button className='absolute top-1/4 left-0 inline-block bg-orange-500 px-8 py-3 mb-6 text-white font-medium'>
+                <button className='xl:absolute md:top-[8%] lg:top-[25%] left-0 inline-block bg-[#FF6C0A] px-12 py-5 mb-6 text-white text-2xl md:text-[32px] font-bold'>
                   Contact Us
                 </button>
-                <h1 className='max-w-[900px] text-3xl md:text-5xl text-[#4D3F36] tracking-tight leading-tight'>
+                <h1 className='p-2 md:p-0 max-w-[900px] text-3xl md:text-5xl text-[#4D3F36] tracking-tight leading-tight'>
                   Connect with Us for Inquiries,{" "}
                   <br className='hidden md:block' />
                   Support, and{" "}
@@ -54,15 +54,17 @@ export default function ContactBanner() {
       </div>
 
       {/* Working hours bar */}
-      <div className='bg-orange-500 py-4 text-center'>
-        <h2 className='text-[#FFFFFF] text-4xl font-bold text-center'>
-          Working Hours
-        </h2>
-      </div>
-      <div className='bg-white py-4 text-center text-gray-800'>
-        <p className='text-lg text-[28px] font-semibold text-[#1A0E05]'>
-          Monday to Friday 8 AM to 5 PM CST
-        </p>
+      <div className=''>
+        <div className='bg-orange-500 h-[74px] flex items-center justify-center text-center'>
+          <h2 className='text-[#FFFFFF] text-4xl font-bold text-center'>
+            Working Hours
+          </h2>
+        </div>
+        <div className='bg-white py-4 text-center text-gray-800'>
+          <p className='text-2xl md:text-[28px] font-semibold text-[#1A0E05]'>
+            Monday to Friday 8 AM to 5 PM CST
+          </p>
+        </div>
       </div>
     </div>
   );

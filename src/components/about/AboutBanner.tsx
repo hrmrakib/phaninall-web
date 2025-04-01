@@ -13,8 +13,8 @@ export default function ContactBanner() {
         <div className='container mx-auto'>
           <div className='z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32'>
             <div className='flex flex-col md:flex-row items-center justify-between'>
-              <div className='sm:text-center md:text-left '>
-                <button className='absolute top-[22%] left-0 inline-block bg-orange-500 px-8 py-3 mb-6 text-white font-medium'>
+              <div className=''>
+                <button className='xl:absolute md:top-[8%] lg:top-[18%] left-0 inline-block bg-[#FF6C0A] px-8 py-3 mb-6 text-white text-2xl md:text-[32px] font-bold'>
                   About Us
                 </button>
                 <h1 className='max-w-[600px] text-3xl md:text-5xl text-[#4D3F36] tracking-tight leading-tight'>
