@@ -15,14 +15,14 @@ export function MobileNav() {
     <div className='md:hidden'>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant='ghost' size='icon' className='md:hidden'>
+          <Button variant='ghost' size='lg' className='md:hidden'>
             <Menu className='h-6 w-6' />
             <span className='sr-only'>Toggle menu</span>
           </Button>
         </SheetTrigger>
         <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
           <div className='flex flex-col h-full'>
-            <div className='flex items-center justify-between border-b pb-4'>
+            <div className='flex items-center justify-between border-b p-4'>
               <Link href={"/"} className='flex items-center gap-2'>
                 <Image
                   src='/logo.svg'
@@ -41,7 +41,7 @@ export function MobileNav() {
               </Button>
             </div>
 
-            <nav className='flex flex-col gap-4 py-8'>
+            <nav className='flex flex-col gap-4 py-8 pl-5'>
               <Link
                 href='/'
                 className='px-2 py-1 hover:text-orange-500 transition-colors'
@@ -86,7 +86,7 @@ export function MobileNav() {
               </Link>
             </nav>
 
-            <div className='mt-auto border-t pt-4'>
+            <div className='mt-auto border-t pt-4 pl-5 pb-4'>
               <div className='flex items-center gap-2'>
                 <Phone className='h-5 w-5' />
                 <span className='font-medium'>+1 636-244-3219</span>

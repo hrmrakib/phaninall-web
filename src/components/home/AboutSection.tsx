@@ -24,8 +24,8 @@ export default function AboutUs() {
         <div className='grid md:grid-cols-2 gap-8 items-center'>
           <div className='relative min-h-[500px] md:min-h-[600px] lg:min-h-[500px] flex flex-col items-center justify-center space-y-6 p-6'>
             {/* User Stats Card */}
-            <div className='md:absolute md:top-56 md:left-4 lg:left-16 lg:top-40'>
-              <div className='relative w-[264px] h-[146px] bg-[#FFFFFF] flex items-center rounded-xl p-6 shadow-sm'>
+            <div className='md:absolute md:top-56 md:left-4 lg:left-16 lg:top-40 w-full md:w-[264px]'>
+              <div className='relative w-auto md:w-[264px] h-[146px] bg-[#FFFFFF] flex items-center rounded-xl p-6 shadow-sm'>
                 <div className='flex flex-col'>
                   <h3 className='text-2xl font-bold text-gray-800'>Our User</h3>
                   <div className='flex items-center'>
@@ -55,7 +55,7 @@ export default function AboutUs() {
             </div>
 
             {/* Feedback Card */}
-            <div className='md:absolute md:right-4 md:top-4 lg:right-20 lg:top-16 w-[264px] min-h-[146px] bg-[#FFFFFF] rounded-3xl p-6 shadow-sm'>
+            <div className='md:absolute md:right-4 md:top-4 lg:right-20 lg:top-16 w-full md:w-[264px] min-h-[146px] bg-[#FFFFFF] rounded-3xl p-6 shadow-sm'>
               <div className='flex flex-col items-center text-center'>
                 <h3 className='text-[32px] font-bold text-[#FF6C0A] mb-2'>
                   95%
@@ -70,7 +70,7 @@ export default function AboutUs() {
             </div>
 
             {/* Experience Card */}
-            <div className='md:absolute md:right-14 md:bottom-10 lg:left-48 lg:bottom-8 w-[264px] min-h-[146px] flex items-center justify-center bg-[#FFFFFF] rounded-3xl p-6 shadow-sm'>
+            <div className='md:absolute md:right-14 md:bottom-10 lg:left-48 lg:bottom-8 w-full md:w-[264px] min-h-[146px] flex items-center justify-center bg-[#FFFFFF] rounded-3xl p-6 shadow-sm'>
               <div className='flex items-center text-center'>
                 <h3 className='text-4xl md:text-[60px] font-bold text-[#FF6C0A] mb-2'>
                   15+

@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className='relative'>
+    <footer className='relative bg-[#FFF0E5]'>
       {/* Header bar */}
-      <div className='relative z-10'>
+      <div className='relative z-10 pt-4'>
         <div className='flex'>
           <div className='bg-white py-3 px-4 flex items-center justify-center w-60'>
             <Image
@@ -19,7 +19,7 @@ export default function Footer() {
             />
           </div>
           <div className='bg-[#FF6C0A] py-4 px-6 flex-1'>
-            <h2 className='text-[#FFFFFF] text-2xl md:text-[44px] font-bold'>
+            <h2 className='text-[#FFFFFF] text-xl md:text-[44px] font-bold'>
               Orange Tech Consultants
             </h2>
           </div>
