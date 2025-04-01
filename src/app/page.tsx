@@ -22,7 +22,7 @@ export default function Home() {
 
         <ContactUs />
 
-        <div className='h-[70px] md:h-[140px] bg-[#FFFFFF]'></div>
+        {/* <div className='h-[70px] md:h-[140px] bg-[#FFFFFF]'></div> */}
       </main>
     </div>
   );
