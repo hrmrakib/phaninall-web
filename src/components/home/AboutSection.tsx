@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutUs() {
   return (
-    <div className='w-full bg-gradient-to-br from-orange-50 via-white to-orange-50'>
+    <div className='w-full bg-gradient-to-br from-[#ff6c0a00] via-[#ff6c0a09] to-[#ff6c0a07]'>
       <div className='container mx-auto px-4 py-12 md:py-20'>
         <div className='text-center mb-8'>
           <h1 className='text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block'>
@@ -22,7 +22,7 @@ export default function AboutUs() {
         </div>
 
         <div className='grid md:grid-cols-2 gap-8 items-center'>
-          <div className='relative min-h-[500px] md:min-h-[600px] lg:min-h-[500px] flex flex-col items-center justify-center space-y-6 p-6'>
+          <div className='relative min-h-[500px] md:min-h-[600px] lg:h-auto bg-[url("/about/about-bg.svg")] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center space-y-6 p-12'>
             {/* User Stats Card */}
             <div className='md:absolute md:top-56 md:left-4 lg:left-16 lg:top-40 w-full md:w-[264px]'>
               <div className='relative w-auto md:w-[264px] h-[146px] bg-[#FFFFFF] flex items-center rounded-xl p-6 shadow-sm'>

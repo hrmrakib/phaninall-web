@@ -53,10 +53,10 @@ export default function CodesDisplay() {
   };
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-[#FFF] via-[#FFF] to-[#FFF] p-4 md:p-8'>
-      <div className='container mx-auto space-y-12'>
+    <div className='relative min-h-screen bg-gradient-to-br from-[#ff6c0a00] via-[#ff6c0a05] to-[#ff6c0a00] p-4 md:p-8'>
+      <div className='z-50 container mx-auto space-y-12'>
         {/* NAICS Codes Section */}
-        <section className='bg-gradient-to-br from-[#FFF0E5] via-[#FFF0E5] to-[#FFF0E5] rounded-3xl p-6 md:p-10'>
+        <section className='z-50 bg-gradient-to-br from-[#FFF0E5] via-[#FFF0E5] to-[#FFF0E5] rounded-3xl p-6 md:p-10'>
           <div className='text-center mb-8'>
             <h2 className='text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm'>
               NAICS Codes
@@ -83,7 +83,7 @@ export default function CodesDisplay() {
         </section>
 
         {/* PSC Codes Section */}
-        <section className='bg-gradient-to-br from-[#FFF0E5] via-[#FFF0E5] to-[#FFF0E5] rounded-3xl p-6 md:p-10'>
+        <section className='z-50 bg-gradient-to-br from-[#FFF0E5] via-[#FFF0E5] to-[#FFF0E5] rounded-3xl p-6 md:p-10'>
           <div className='text-center mb-8'>
             <h2 className='text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm'>
               PSC Codes
@@ -108,6 +108,16 @@ export default function CodesDisplay() {
             ))}
           </div>
         </section>
+
+        {/* gradient svg */}
+        {/* <div className='z-10 absolute top-[610px] -left-[280px] border-4 border-red-400'>
+          <Image
+            src='/home/about-section-bg.svg'
+            width={500}
+            height={500}
+            alt='svg'
+          />
+        </div> */}
       </div>
     </div>
   );

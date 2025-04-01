@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Message = () => {
   const [showChatTooltip, setShowChatTooltip] = useState(false);
-
+  const messengerUrl = "https://m.me/username";
   return (
     <div className='fixed bottom-6 right-6 z-50'>
       <div className='relative'>
@@ -14,11 +15,14 @@ const Message = () => {
             <div className='absolute bottom-0 right-4 transform translate-y-1/2 rotate-45 w-2 h-2 bg-white'></div>
           </div>
         )}
-        <button
+        <Link
+          href={messengerUrl}
+          target='_blank'
+          rel='noopener noreferrer'
           className='transition-colors'
           onMouseEnter={() => setShowChatTooltip(true)}
           onMouseLeave={() => setShowChatTooltip(false)}
-          onClick={() => alert("Chat functionality would open here")}
+          // onClick={() => alert("Chat functionality would open here")}
         >
           <svg
             width='110'
@@ -86,7 +90,7 @@ const Message = () => {
               </filter>
             </defs>
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   );
