@@ -13,8 +13,8 @@ const Hero = () => {
   return (
     <div className='h-screen bg-[url("/hero-bg2.png")] md:bg-[url("/hero-bg.png")] bg-cover bg-center bg-no-repeat'>
       {/* This header is for the home page */}
-      <header className='bg-transparent container mx-auto py-4 px-4 flex items-center justify-between'>
-        <div className='flex items-center'>
+      <header className='z-0 bg-transparent container mx-auto h-[90px] xl:h-[142px] py-4 px-4 flex items-center justify-between'>
+        <Link href={"/"} className='flex items-center'>
           <Image
             src='/logo.svg'
             alt='Orange Tech Consultants Logo'
@@ -22,7 +22,7 @@ const Hero = () => {
             height={250}
             className='w-[100px] h-[42px]'
           />
-        </div>
+        </Link>
 
         <nav className='hidden md:flex items-center space-x-8'>
           <Link

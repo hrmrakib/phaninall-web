@@ -39,8 +39,8 @@ export default function ContactBanner() {
                     <Image
                       src='/contact-banner.svg'
                       alt='Customer Support Agent'
-                      width={700}
-                      height={700}
+                      width={800}
+                      height={800}
                       className='relative z-10'
                     />
                   </div>

@@ -7,7 +7,8 @@ interface ServiceData {
   id: string;
   title: string;
   icon: string;
-  description: string;
+  description: string[] | string;
+  isExpanded?: boolean;
 }
 
 export default function ServicesSection() {
@@ -29,43 +30,67 @@ export default function ServicesSection() {
       id: "1",
       title: "Generative AI",
       icon: "/service.svg",
-      description:
+      description: [
         "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      ],
     },
     {
       id: "2",
       title: "AI & MLOps",
       icon: "/service.svg",
-      description:
+      description: [
         "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      ],
     },
     {
       id: "3",
       title: "Site Reliability Engineering (SRE)",
       icon: "/service.svg",
-      description:
+      description: [
         "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      ],
     },
     {
       id: "4",
       title: "Generative AI",
       icon: "/service.svg",
-      description:
+      description: [
         "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      ],
     },
     {
       id: "5",
       title: "AI & MLOps",
       icon: "/service.svg",
-      description:
+      description: [
         "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      ],
     },
     {
       id: "6",
       title: "Site Reliability Engineering (SRE)",
       icon: "/service.svg",
-      description:
+      description: [
         "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+        "Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      ],
     },
   ];
 
@@ -86,10 +111,10 @@ export default function ServicesSection() {
         </div>
 
         <div className={`grid ${getGridCols()} gap-6 md:gap-8`}>
-          {services.map((service) => (
+          {/* {services.map((service) => (
             <div
               key={service.id}
-              className='bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow'
+              className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow'
             >
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
@@ -108,10 +133,60 @@ export default function ServicesSection() {
               </div>
 
               <div className='mt-4'>
+                <div className='group'>
+                  <ul className='list-disc pl-5 space-y-2'>
+                    {Array.isArray(service.description) &&
+                      service.description.map((desc: string, index: number) => (
+                        <li
+                          key={index}
+                          className={`text-base text-[#1A0D05] ${
+                            index > 0 ? "hidden group-hover:block" : ""
+                          }`}
+                        >
+                          {desc[0].toUpperCase() + desc.slice(1)}
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))} */}
+
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow'
+            >
+              <div className='flex items-start gap-4'>
+                <div className='w-[80px] h-[80px]'>
+                  <Image
+                    src={service.icon || "/placeholder.svg"}
+                    alt={service.title}
+                    width={24}
+                    height={24}
+                    className='w-[80px] h-[80px]'
+                  />
+                </div>
+                <h3 className='text-2xl font-bold text-[#1A0D05]'>
+                  {service.title}
+                </h3>
+              </div>
+
+              <div className='mt-4'>
                 <ul className='list-disc pl-5 space-y-2'>
-                  <li className='text-base text-[#1A0D05]'>
-                    {service.description}
-                  </li>
+                  {Array.isArray(service.description) &&
+                    service.description.map((desc: string, index: number) => (
+                      <li
+                        key={index}
+                        className={`text-base text-[#1A0D05] duration-700 ease-in-out ${
+                          index > 0
+                            ? "opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden"
+                            : ""
+                        }`}
+                      >
+                        {desc[0].toUpperCase() + desc.slice(1)}
+                      </li>
+                    ))}
                 </ul>
               </div>
             </div>

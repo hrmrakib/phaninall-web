@@ -46,13 +46,13 @@ export default function ContactUs() {
         message: "",
       });
       setSubmitSuccess(false);
-    }, 3000);
+    }, 1500);
   };
 
   return (
     <div className='bg-gradient-to-br from-orange-100 via-orange-50 to-orange-100 p-4 md:p-8 relative overflow-hidden my-[140px]'>
       <div className='text-center mb-24'>
-        <h2 className='text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
+        <h2 className='text-3xl md:text-[32px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
           Contact Us
           <div className='h-0.5 w-12 bg-[#303030] absolute left-1/2 transform -translate-x-1/2 bottom-0 mt-1'></div>
         </h2>

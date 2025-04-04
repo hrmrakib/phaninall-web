@@ -18,6 +18,7 @@ export default function Footer() {
               className='h-auto w-auto'
             />
           </div>
+          <div className="bg-transparent w-4"></div>
           <div className='bg-[#FF6C0A] py-4 px-6 flex-1'>
             <h2 className='text-[#FFFFFF] text-xl md:text-[44px] font-bold'>
               Orange Tech Consultants

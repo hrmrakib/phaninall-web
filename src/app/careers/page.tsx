@@ -7,7 +7,7 @@ const Careers = () => {
   return (
     <div>
       <CareersBanner />
-      
+
       <JobCard />
 
       <OrganizeConsulting />
