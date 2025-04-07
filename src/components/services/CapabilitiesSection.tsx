@@ -197,28 +197,6 @@ export default function CapabilitiesSection() {
                     capability.expanded ? "bg-[#FF6C0A]" : "bg-[#B29D8F]"
                   } group-hover:bg-[#282625] group-hover:text-[#feffff] text-xl rounded-full p-1 transition-transform duration-300`}
                 />
-                {/* <svg
-                  width='48'
-                  height='48'
-                  viewBox='0 0 48 48'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <rect
-                    width='48'
-                    height='48'
-                    rx='24'
-                    className='group-hover:bg-[#282625] hover:bg-[#282625]'
-                    fill={`${capability.expanded ? "#FF6C0A" : "#B29D8F"}`}
-                  />
-                  <path
-                    d='M18.1668 18.1666L29.8335 29.8333M29.8335 29.8333V18.1666M29.8335 29.8333H18.1668'
-                    stroke='#FFF'
-                    stroke-width='1.5'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                  />
-                </svg> */}
               </button>
             </div>
 
