@@ -29,7 +29,7 @@ const CapabilityStatement = () => {
         />
 
         {/* Gradient background from bottom to half-top */}
-        <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-[420px] bg-gradient-to-t from-[#000000b0] via-transparent to-transparent flex items-center justify-center gap-8'>
+        <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-[520px] bg-gradient-to-t from-[#000000b0] via-transparent to-transparent flex items-center justify-center gap-8'>
           <div className='absolute bottom-6  flex items-center justify-center gap-4'>
             <button className='bg-[#FFF] text-black text-lg px-3 py-2 rounded-lg'>
               View

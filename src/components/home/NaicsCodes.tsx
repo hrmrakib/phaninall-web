@@ -1,154 +1,196 @@
-import { useState } from 'react';
-import Masonry from 'react-masonry-css';
+import Link from "next/link";
+import { useState } from "react";
+import Masonry from "react-masonry-css";
 
 const services = [
-	{
-		code: '541511',
-		title: 'Custom Computer Programming Services',
-		description:
-			'Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.',
-	},
-	{
-		code: '541512',
-		title: 'Computer Systems Design Services',
-		description:
-			'Specializes in planning and designing integrated computer systems to meet client business requirements.',
-	},
-	{
-		code: '541513',
-		title: 'Computer Facilities Management Services',
-		description:
-			'Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site and remote management of computer systems and data processing facilities for clients.',
-	},
-	{
-		code: '541519',
-		title: 'Other Computer-Related Services',
-		description:
-			'Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.',
-	},
-	{
-		code: '541511',
-		title: 'Custom Computer Programming Services',
-		description:
-			'Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.',
-	},
-	{
-		code: '541512',
-		title: 'Computer Systems Design Services',
-		description:
-			'Specializes in planning and designing integrated computer systems to meet client business requirements.',
-	},
-	{
-		code: '541513',
-		title: 'Computer Facilities Management Services',
-		description:
-			'Provides on-site and remote management of computer systems and data processing facilities for clients.',
-	},
-	{
-		code: '541519',
-		title: 'Other Computer-Related Services',
-		description:
-			'Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.',
-	},
-	{
-		code: '541511',
-		title: 'Custom Computer Programming Services',
-		description:
-			'Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.',
-	},
-	{
-		code: '541512',
-		title: 'Computer Systems Design Services',
-		description:
-			'Specializes in planning and designing integrated computer systems to meet client business requirements.',
-	},
-	{
-		code: '541513',
-		title: 'Computer Facilities Management Services',
-		description:
-			'Provides on-site and remote management of computer systems and data processing facilities for clients.',
-	},
-	{
-		code: '541519',
-		title: 'Other Computer-Related Services',
-		description:
-			'Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.',
-	},
-	{
-		code: '541511',
-		title: 'Custom Computer Programming Services',
-		description:
-			'Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.',
-	},
-	{
-		code: '541512',
-		title: 'Computer Systems Design Services',
-		description:
-			'Specializes in planning and designing integrated computer systems to meet client business requirements.',
-	},
-	{
-		code: '541513',
-		title: 'Computer Facilities Management Services',
-		description:
-			'Provides on-site and remote management of computer systems and data processing facilities for clients.',
-	},
-	{
-		code: '541519',
-		title: 'Other Computer-Related Services',
-		description:
-			'Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.',
-	},
+  {
+    code: "541511",
+    title: "Custom Computer Programming Services",
+    description:
+      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
+  },
+  {
+    code: "541512",
+    title: "Computer Systems Design Services",
+    description:
+      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
+  },
+  {
+    code: "541513",
+    title: "Computer Facilities Management Services",
+    description:
+      "Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site.",
+  },
+  {
+    code: "541519",
+    title: "Other Computer-Related Services",
+    description:
+      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
+  },
+  {
+    code: "541511",
+    title: "Custom Computer Programming Services",
+    description:
+      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
+  },
+  {
+    code: "541512",
+    title: "Computer Systems Design Services",
+    description:
+      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
+  },
+  {
+    code: "541513",
+    title: "Computer Facilities Management Services",
+    description:
+      "Provides on-site and remote management of computer systems and data processing facilities for clients.",
+  },
+  {
+    code: "541519",
+    title: "Other Computer-Related Services",
+    description:
+      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
+  },
+  {
+    code: "541511",
+    title: "Custom Computer Programming Services",
+    description:
+      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
+  },
+  {
+    code: "541512",
+    title: "Computer Systems Design Services",
+    description:
+      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
+  },
+  {
+    code: "541513",
+    title: "Computer Facilities Management Services",
+    description:
+      "Provides on-site and remote management of computer systems and data processing facilities for clients.",
+  },
+  {
+    code: "541519",
+    title: "Other Computer-Related Services",
+    description:
+      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
+  },
+  {
+    code: "541511",
+    title: "Custom Computer Programming Services",
+    description:
+      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
+  },
+  {
+    code: "541512",
+    title: "Computer Systems Design Services",
+    description:
+      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
+  },
+  {
+    code: "541513",
+    title: "Computer Facilities Management Services",
+    description:
+      "Provides on-site and remote management of computer systems and data processing facilities for clients.",
+  },
+  {
+    code: "541519",
+    title: "Other Computer-Related Services",
+    description:
+      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
+  },
 ];
 
 export default function NaicsCodes() {
-	return (
-		<div className="m-[40px] p-[40px]">
-			<div className="w-full pt-[40px] pb-[3px] bg-[#FFF0E5] rounded-3xl">
-				<h2 className="text-center text-[32px] font-bold text-[#FF6C0A] mb-[40px]">
-					NAICS Codes
-					<div className="w-[60px] border-t-2 border-black mx-auto"></div>
-				</h2>
-				<div className="m-[40px]">
-					<Masonry
-						breakpointCols={{
-							default: 4,
-							1100: 3,
-							700: 2,
-							500: 1,
-						}}
-						className="flex gap-[17px]"
-						columnClassName="bg-clip-padding"
-					>
-						{services.map((service) => (
-							<CodeService
-								key={service.code}
-								service={service}
-							/>
-						))}
-					</Masonry>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className='m-[40px] p-[40px]'>
+      <div className='w-full pt-[40px] pb-[3px] bg-[#FFF0E5] rounded-3xl'>
+        <h2 className='text-3xl md:text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500'>
+          NAICS Codes
+          <div className='w-[60px] border-t-2 border-black mx-auto'></div>
+        </h2>
+        <div className='m-[40px]'>
+          <Masonry
+            breakpointCols={{
+              default: 4,
+              1100: 3,
+              700: 2,
+              500: 1,
+            }}
+            className='flex gap-[17px]'
+            columnClassName='bg-clip-padding'
+          >
+            {services.map((service) => (
+              <CodeService key={service.code} service={service} />
+            ))}
+          </Masonry>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function CodeService({ service }: any) {
-	const { code, description } = service;
-	const [isOpen, setIsOpen] = useState(false);
+  const { code, description } = service;
+  const [isOpen, setIsOpen] = useState(false);
 
-	return (
-		<div
-			onClick={() => setIsOpen(!isOpen)}
-			className="w-full p-[20px] mb-[17px] bg-white border-red-300 border rounded-4xl"
-		>
-			<div className="text-center">
-				<div className={`${isOpen ? 'bg-[#FFF0E5]' : 'hover:p-[8px]'}`}>
-					<p className="border-b border-black mx-[5px]">Codes</p>
-					<p>{code}</p>
-				</div>
+  return (
+    <div
+      onClick={() => setIsOpen(!isOpen)}
+      className='group hover:py-7 w-full p-[20px] mb-[17px] bg-white bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 transition-transform duration-150 cursor-pointer'
+    >
+      <div className='text-center'>
+        <div
+          className={`${
+            isOpen ? "bg-[#FF6C0A] py-6" : "hover:py-7 hover:bg-[#FF6C0A]"
+          } rounded-md transition-all duration-100`}
+        >
+          <p
+            className={`border-b ${
+              isOpen
+                ? "border-[#FFD1B2] text-white"
+                : "border-[#FFD1B2] text-black"
+            } mx-[5px] text-[#1A0D05] pb-2 hover:text-white group-hover:text-white font-bold`}
+          >
+            Codes
+          </p>
+          <p
+            className={`${
+              isOpen ? "text-white" : "text-[#1A0D05]"
+            } font-bold group-hover:text-white text-base pt-2`}
+          >
+            {code}
+          </p>
+        </div>
 
-				{isOpen && <p className="mt-[20px]">{description}</p>}
-			</div>
-		</div>
-	);
+        {isOpen && (
+          <div className='flex flex-col mt-4'>
+            <p className='mt-[20px]'>{description}</p>
+
+            <Link
+              className='mt-5 text-[#FF6C0A] text-lg ml-auto flex items-center gap-2'
+              href={"/"}
+            >
+              View more{" "}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                className='lucide lucide-arrow-down-right-icon lucide-arrow-down-right -rotate-90'
+              >
+                <path d='m7 7 10 10' />
+                <path d='M17 7v10H7' />
+              </svg>
+            </Link>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
