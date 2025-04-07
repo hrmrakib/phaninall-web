@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import ImageViewer from "./ImageViewer";
-import { Download, X, Eye } from "lucide-react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 const CapabilityStatement = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +19,6 @@ const CapabilityStatement = () => {
   };
 
   const handleImageViewer = () => {
-    // Logic to open the image viewer modal
     setIsOpen(true);
   };
 

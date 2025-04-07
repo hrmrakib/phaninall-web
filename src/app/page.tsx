@@ -2,7 +2,7 @@
 
 import AboutUs from "@/components/home/AboutSection";
 import Hero from "@/components/home/Hero";
-import OurService from "@/components/home/OurService";
+// import OurService from "@/components/home/OurService";
 import ContactUs from "@/components/share/ContactUs";
 import NaicsCodes from "@/components/home/NaicsCodes";
 import PSCCODES from "@/components/home/PSCCodes";

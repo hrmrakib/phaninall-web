@@ -59,6 +59,12 @@ const services = [
   },
 ];
 
+interface IServiceData {
+  code: string;
+  title: string;
+  description: string;
+}
+
 export default function PSCCODES() {
   return (
     <div className='container mx-auto px-4'>
@@ -88,7 +94,7 @@ export default function PSCCODES() {
   );
 }
 
-function CodeService({ service }: any) {
+function CodeService({ service }: { service: IServiceData }) {
   const { code, description } = service;
   const [isOpen, setIsOpen] = useState(false);
 

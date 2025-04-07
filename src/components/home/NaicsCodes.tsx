@@ -59,6 +59,12 @@ const services = [
   },
 ];
 
+interface IServiceData {
+  code: string;
+  title: string;
+  description: string;
+}
+
 export default function NaicsCodes() {
   return (
     <div className='container mx-auto px-4 mb-14 md:mb-20'>
@@ -88,7 +94,7 @@ export default function NaicsCodes() {
   );
 }
 
-function CodeService({ service }: any) {
+function CodeService({ service }: { service: IServiceData }) {
   const { code, description } = service;
   const [isOpen, setIsOpen] = useState(false);
 
