@@ -1,29 +1,29 @@
-'use client';
+"use client";
 
-import AboutUs from '@/components/home/AboutSection';
-import Hero from '@/components/home/Hero';
-import CodesDisplay from '@/components/home/CodesDisplay';
-import OurService from '@/components/home/OurService';
-import ContactUs from '@/components/share/ContactUs';
-import NaicsCodes from '@/components/home/NaicsCodes';
+import AboutUs from "@/components/home/AboutSection";
+import Hero from "@/components/home/Hero";
+import OurService from "@/components/home/OurService";
+import ContactUs from "@/components/share/ContactUs";
+import NaicsCodes from "@/components/home/NaicsCodes";
+import PSCCODES from "@/components/home/PSCCodes";
+import ServicesSection2 from "@/components/home/OurService2";
 export default function Home() {
-	return (
-		<div className="min-h- flex flex-col">
-			<main className="flex-1">
-				<Hero />
+  return (
+    <div className='min-h- flex flex-col'>
+      <main className='flex-1'>
+        <Hero />
 
-				<AboutUs />
+        <AboutUs />
 
-				<CodesDisplay />
-				
-				<NaicsCodes />
+        <NaicsCodes />
 
-				<OurService />
+        <PSCCODES />
 
-				<ContactUs />
+        {/* <OurService /> */}
+        <ServicesSection2 />
 
-				{/* <div className='h-[70px] md:h-[140px] bg-[#FFFFFF]'></div> */}
-			</main>
-		</div>
-	);
+        <ContactUs />
+      </main>
+    </div>
+  );
 }

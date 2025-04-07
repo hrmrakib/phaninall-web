@@ -7,103 +7,61 @@ const services = [
     code: "541511",
     title: "Custom Computer Programming Services",
     description:
-      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
+      "Custom Computer Programming Services – Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs. Includes custom applications, system software, and web development.",
   },
   {
     code: "541512",
     title: "Computer Systems Design Services",
     description:
-      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
+      "Data Processing, Hosting, and Related Services – Includes cloud computing services, data storage, and data hosting services.",
   },
   {
     code: "541513",
     title: "Computer Facilities Management Services",
     description:
-      "Provides on-site and remote management of computer systems and data processing facilities for clients.Provides on-site.",
+      "Custom Computer Programming Services – Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs. Includes custom applications, system software, and web development.",
   },
   {
     code: "541519",
     title: "Other Computer-Related Services",
     description:
-      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
+      "Other Computer-Related Services – Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting that aren't classified under other NAICS codes.",
   },
   {
     code: "541511",
     title: "Custom Computer Programming Services",
     description:
-      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
+      "Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology) Involves advanced research and development activities in AI, machine learning, data science, and engineering projects.",
   },
   {
     code: "541512",
     title: "Computer Systems Design Services",
     description:
-      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
+      "Data Processing, Hosting, and Related Services – Includes cloud computing services, data storage, and data hosting services.",
   },
   {
     code: "541513",
     title: "Computer Facilities Management Services",
     description:
-      "Provides on-site and remote management of computer systems and data processing facilities for clients.",
+      "Computer Training – Provides training services in IT-related fields, including programming, cloud engineering, cybersecurity, and AI/ML training sessions.",
   },
   {
-    code: "541519",
-    title: "Other Computer-Related Services",
-    description:
-      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
-  },
-  {
-    code: "541511",
-    title: "Custom Computer Programming Services",
-    description:
-      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
-  },
-  {
-    code: "541512",
-    title: "Computer Systems Design Services",
-    description:
-      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
-  },
-  {
-    code: "541513",
+    code: "541430",
     title: "Computer Facilities Management Services",
     description:
-      "Provides on-site and remote management of computer systems and data processing facilities for clients.",
+      "Computer Training – Provides training services in IT-related fields, including programming, cloud engineering, cybersecurity, and AI/ML training sessions.",
   },
   {
     code: "541519",
     title: "Other Computer-Related Services",
     description:
-      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
-  },
-  {
-    code: "541511",
-    title: "Custom Computer Programming Services",
-    description:
-      "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs.",
-  },
-  {
-    code: "541512",
-    title: "Computer Systems Design Services",
-    description:
-      "Specializes in planning and designing integrated computer systems to meet client business requirements.",
-  },
-  {
-    code: "541513",
-    title: "Computer Facilities Management Services",
-    description:
-      "Provides on-site and remote management of computer systems and data processing facilities for clients.",
-  },
-  {
-    code: "541519",
-    title: "Other Computer-Related Services",
-    description:
-      "Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting.",
+      "All Other Professional, Scientific, and Technical Services –Encompasses a variety of professional services such as DevSecOps, SRE, and AI/ML implementation that don't fall under other specific categories.",
   },
 ];
 
 export default function NaicsCodes() {
   return (
-    <div className='m-[40px] p-[40px]'>
+    <div className='container mx-auto px-4 mb-14 md:mb-20'>
       <div className='w-full pt-[40px] pb-[3px] bg-[#FFF0E5] rounded-3xl'>
         <h2 className='text-3xl md:text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500'>
           NAICS Codes
@@ -137,7 +95,7 @@ function CodeService({ service }: any) {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className='group hover:py-7 w-full p-[20px] mb-[17px] bg-white bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 transition-transform duration-150 cursor-pointer'
+      className='group hover:py-7 w-full p-5 mb-[17px] bg-white bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 transition-transform duration-150 cursor-pointer'
     >
       <div className='text-center'>
         <div
@@ -165,7 +123,7 @@ function CodeService({ service }: any) {
 
         {isOpen && (
           <div className='flex flex-col mt-4'>
-            <p className='mt-[20px]'>{description}</p>
+            <p className='mt-2 text-left'>{description}</p>
 
             <Link
               className='mt-5 text-[#FF6C0A] text-lg ml-auto flex items-center gap-2'

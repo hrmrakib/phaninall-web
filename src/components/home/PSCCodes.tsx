@@ -1,155 +1,154 @@
-"use client";
-
+import Link from "next/link";
 import { useState } from "react";
+import Masonry from "react-masonry-css";
 
-interface CodeCardData {
-  id: string;
-  code: string;
-  title?: string;
-  description?: string;
-  isExpanded?: boolean;
+const services = [
+  {
+    code: "541511",
+    title: "Custom Computer Programming Services",
+    description:
+      "Custom Computer Programming Services – Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs. Includes custom applications, system software, and web development.",
+  },
+  {
+    code: "541512",
+    title: "Computer Systems Design Services",
+    description:
+      "Data Processing, Hosting, and Related Services – Includes cloud computing services, data storage, and data hosting services.",
+  },
+  {
+    code: "541513",
+    title: "Computer Facilities Management Services",
+    description:
+      "Custom Computer Programming Services – Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs. Includes custom applications, system software, and web development.",
+  },
+  {
+    code: "541519",
+    title: "Other Computer-Related Services",
+    description:
+      "Other Computer-Related Services – Covers all other IT-related services, including cloud services, cybersecurity, and IT consulting that aren't classified under other NAICS codes.",
+  },
+  {
+    code: "541511",
+    title: "Custom Computer Programming Services",
+    description:
+      "Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology) Involves advanced research and development activities in AI, machine learning, data science, and engineering projects.",
+  },
+  {
+    code: "541512",
+    title: "Computer Systems Design Services",
+    description:
+      "Data Processing, Hosting, and Related Services – Includes cloud computing services, data storage, and data hosting services.",
+  },
+  {
+    code: "541513",
+    title: "Computer Facilities Management Services",
+    description:
+      "Computer Training – Provides training services in IT-related fields, including programming, cloud engineering, cybersecurity, and AI/ML training sessions.",
+  },
+  {
+    code: "541430",
+    title: "Computer Facilities Management Services",
+    description:
+      "Computer Training – Provides training services in IT-related fields, including programming, cloud engineering, cybersecurity, and AI/ML training sessions.",
+  },
+  {
+    code: "541519",
+    title: "Other Computer-Related Services",
+    description:
+      "All Other Professional, Scientific, and Technical Services –Encompasses a variety of professional services such as DevSecOps, SRE, and AI/ML implementation that don't fall under other specific categories.",
+  },
+];
+
+export default function PSCCODES() {
+  return (
+    <div className='container mx-auto px-4'>
+      <div className='w-full pt-[40px] pb-[3px] bg-[#FFF0E5] rounded-3xl'>
+        <h2 className='text-3xl md:text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500'>
+          PSC Codes
+          <div className='w-[60px] border-t-2 border-black mx-auto'></div>
+        </h2>
+        <div className='m-[40px]'>
+          <Masonry
+            breakpointCols={{
+              default: 4,
+              1100: 3,
+              700: 2,
+              500: 1,
+            }}
+            className='flex gap-[17px]'
+            columnClassName='bg-clip-padding'
+          >
+            {services.map((service) => (
+              <CodeService key={service.code} service={service} />
+            ))}
+          </Masonry>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default function CodeCards() {
-  const [cards, setCards] = useState<CodeCardData[]>([
-    {
-      id: "1",
-      code: "541511",
-      title: "Custom Computer Programming Services",
-      description:
-        "Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs. Includes custom applications, system software, and web development.",
-      isExpanded: false,
-    },
-    {
-      id: "2",
-      code: "541512",
-      title: "Computer Systems Design Services",
-      description:
-        "Planning and designing computer systems that integrate hardware, software, and communication technologies. Includes consulting on system requirements, security, and implementation.",
-      isExpanded: false,
-    },
-    {
-      id: "3",
-      code: "541513",
-      title: "Computer Facilities Management Services",
-      description:
-        "On-site management and operation of client's computer systems and/or data processing facilities. Includes support services and ongoing management of systems or facilities.",
-      isExpanded: false,
-    },
-    {
-      id: "4",
-      code: "541519",
-      title: "Other Computer Related Services",
-      description:
-        "Specialized computer services not classified elsewhere. Includes disaster recovery services, software installation, and computer system auditing services.",
-      isExpanded: false,
-    },
-    {
-      id: "5",
-      code: "518210",
-      title: "Data Processing, Hosting, and Related Services",
-      description:
-        "Providing infrastructure for hosting, data processing services, and related services. Includes specialized hosting activities and automated data processing.",
-      isExpanded: false,
-    },
-    {
-      id: "6",
-      code: "519190",
-      title: "All Other Information Services",
-      description:
-        "Information services not classified elsewhere. Includes database and information retrieval services, news syndicates, and libraries or archives.",
-      isExpanded: false,
-    },
-    {
-      id: "7",
-      code: "541990",
-      title: "All Other Professional, Scientific, and Technical Services",
-      description:
-        "Professional, scientific, and technical services not classified elsewhere. Includes arbitration and mediation services, patent brokering, and weather forecasting.",
-      isExpanded: false,
-    },
-    {
-      id: "8",
-      code: "541715",
-      title:
-        "Research and Development in the Physical, Engineering, and Life Sciences",
-      description:
-        "Conducting research and experimental development in physical, engineering, and life sciences. Includes biotechnology, environmental, and industrial research.",
-      isExpanded: false,
-    },
-    {
-      id: "9",
-      code: "611420",
-      title: "Computer Training",
-      description:
-        "Providing computer training (except as part of formal educational programs). Includes training in the use of computer software, hardware, and programming languages.",
-      isExpanded: false,
-    },
-  ]);
-
-  const toggleExpand = (id: string) => {
-    setCards(
-      cards.map((card) => ({
-        ...card,
-        isExpanded: card.id === id ? !card.isExpanded : card.isExpanded,
-      }))
-    );
-  };
+function CodeService({ service }: any) {
+  const { code, description } = service;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-      {cards.map((card) => (
-        <div key={card.id} className='grid  grid-cols-1 border-2'>
-          {/* Card Header */}
-          <div
-            className={`rounded-xl p-6 cursor-pointer transition-all duration-200 hover:shadow-md 
-              ${
-                card.isExpanded
-                  ? "bg-[#FF6B00] text-white rounded-b-none"
-                  : "bg-white/80 hover:bg-white"
-              }`}
-            onClick={() => toggleExpand(card.id)}
+    <div
+      onClick={() => setIsOpen(!isOpen)}
+      className='group hover:py-7 w-full p-[20px] mb-[17px] bg-white bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 transition-transform duration-150 cursor-pointer'
+    >
+      <div className='text-center'>
+        <div
+          className={`${
+            isOpen ? "bg-[#FF6C0A] py-6" : "hover:py-7 hover:bg-[#FF6C0A]"
+          } rounded-md transition-all duration-100`}
+        >
+          <p
+            className={`border-b ${
+              isOpen
+                ? "border-[#FFD1B2] text-white"
+                : "border-[#FFD1B2] text-black"
+            } mx-[5px] text-[#1A0D05] pb-2 hover:text-white group-hover:text-white font-bold`}
           >
-            <div className='text-center'>
-              <p className='text-lg font-medium'>Code</p>
-              <h2 className='text-2xl font-bold mt-2'>{card.code}</h2>
-            </div>
-          </div>
-
-          {/* Expanded Content */}
-          <div
-            className={`
-              overflow-hidden transition-all duration-300 bg-white rounded-b-xl shadow-md
-              ${
-                card.isExpanded
-                  ? "max-h-96 opacity-100 p-6"
-                  : "max-h-0 opacity-0 p-0 border-0"
-              }
-            `}
+            Codes
+          </p>
+          <p
+            className={`${
+              isOpen ? "text-white" : "text-[#1A0D05]"
+            } font-bold group-hover:text-white text-base pt-2`}
           >
-            <h3 className='font-medium'>{card.title}</h3>
-            <p className='text-sm mt-2'>{card.description}</p>
-            <div className='flex justify-end mt-4'>
-              <button className='flex items-center text-sm font-medium text-[#FF6B00]'>
-                View more
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  stroke='currentColor'
-                  strokeWidth='2'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  className='ml-1 h-4 w-4'
-                >
-                  <path d='M5 12h14' />
-                  <path d='m12 5 7 7-7 7' />
-                </svg>
-              </button>
-            </div>
-          </div>
+            {code}
+          </p>
         </div>
-      ))}
+
+        {isOpen && (
+          <div className='flex flex-col mt-4'>
+            <p className='mt-[20px]'>{description}</p>
+
+            <Link
+              className='mt-5 text-[#FF6C0A] text-lg ml-auto flex items-center gap-2'
+              href={"/"}
+            >
+              View more{" "}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                className='lucide lucide-arrow-down-right-icon lucide-arrow-down-right -rotate-90'
+              >
+                <path d='m7 7 10 10' />
+                <path d='M17 7v10H7' />
+              </svg>
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

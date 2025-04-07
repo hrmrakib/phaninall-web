@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Dot } from "lucide-react";
 
 interface ServiceData {
   id: string;
@@ -12,19 +12,6 @@ interface ServiceData {
 }
 
 export default function ServicesSection() {
-  const [windowWidth, setWindowWidth] = useState<number>(0);
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const services: ServiceData[] = [
     {
       id: "1",
@@ -94,12 +81,6 @@ export default function ServicesSection() {
     },
   ];
 
-  const getGridCols = () => {
-    if (windowWidth < 640) return "grid-cols-1";
-    if (windowWidth < 1024) return "grid-cols-2";
-    return "grid-cols-3";
-  };
-
   return (
     <div className='bg-gradient-to-br from-[#ff6c0a00] via-[#ff6c0a00] to-[#ff6c0a00] p-4 md:p-8'>
       <div className='container mx-auto'>
@@ -110,48 +91,9 @@ export default function ServicesSection() {
           </h2>
         </div>
 
-        <div className={`grid ${getGridCols()} gap-6 md:gap-8`}>
-          {/* {services.map((service) => (
-            <div
-              key={service.id}
-              className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow'
-            >
-              <div className='flex items-start gap-4'>
-                <div className='w-[80px] h-[80px]'>
-                  <Image
-                    src={service.icon || "/placeholder.svg"}
-                    alt={service.title}
-                    width={24}
-                    height={24}
-                    className='w-[80px] h-[80px]'
-                  />
-                </div>
-
-                <h3 className='text-2xl font-bold text-[#1A0D05]'>
-                  {service.title}
-                </h3>
-              </div>
-
-              <div className='mt-4'>
-                <div className='group'>
-                  <ul className='list-disc pl-5 space-y-2'>
-                    {Array.isArray(service.description) &&
-                      service.description.map((desc: string, index: number) => (
-                        <li
-                          key={index}
-                          className={`text-base text-[#1A0D05] ${
-                            index > 0 ? "hidden group-hover:block" : ""
-                          }`}
-                        >
-                          {desc[0].toUpperCase() + desc.slice(1)}
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))} */}
-
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 md:gap-8`}
+        >
           {services.map((service) => (
             <div
               key={service.id}
@@ -173,17 +115,18 @@ export default function ServicesSection() {
               </div>
 
               <div className='mt-4'>
-                <ul className='list-disc pl-5 space-y-2'>
+                <ul className='space-y-2'>
                   {Array.isArray(service.description) &&
                     service.description.map((desc: string, index: number) => (
                       <li
                         key={index}
-                        className={`text-base text-[#1A0D05] duration-700 ease-in-out ${
+                        className={`flex items-start justify-start gap-1 text-base text-[#1A0D05] duration-700 ease-in-out ${
                           index > 0
                             ? "opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden"
                             : ""
                         }`}
                       >
+                        <Dot className='w-20' />{" "}
                         {desc[0].toUpperCase() + desc.slice(1)}
                       </li>
                     ))}
