@@ -66,10 +66,10 @@ export default function OrganizeConsulting() {
         {capabilities.map((capability) => (
           <div
             key={capability.id}
-            className='bg-white rounded-lg overflow-hidden'
+            className='bg-white  rounded-lg overflow-hidden'
           >
             <div
-              className='flex items-center p-4 cursor-pointer'
+              className='flex items-center p-4 border-b border-b-[#FFE0CC] cursor-pointer'
               onClick={() => toggleExpand(capability.id)}
             >
               <div className='w-[175px] h-[120px] md:w-[175px] md:h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4 md:mr-6'>
