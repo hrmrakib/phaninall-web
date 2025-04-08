@@ -14,7 +14,7 @@ type Message = {
 const Message = () => {
   const [showChatTooltip, setShowChatTooltip] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
