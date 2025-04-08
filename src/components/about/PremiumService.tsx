@@ -144,10 +144,10 @@ export default function Home() {
           >
             <div
               onClick={() => handleToggle(service.id)}
-              className='flex flex-col md:flex-row items-center md:justify-between'
+              className='group flex flex-col md:flex-row items-center md:justify-between'
             >
               <div className='flex flex-row items-center justify-center gap-4 md:gap-8  self-start md:self-center'>
-                <div className='w-24 h-24 md:w-32 md:h-32 relative flex-shrink-0'>
+                <div className='w-24 h-24 md:w-32 md:h-32 relative flex-shrink-0 group-hover:opacity-70'>
                   <Image
                     src={service.image || "/placeholder.svg"}
                     alt={service.alt}
@@ -156,7 +156,7 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <h3 className='text-[#FF6C0A] text-xl md:text-[32px]'>
+                  <h3 className='text-[#FF6C0A] text-xl md:text-[32px] group-hover:opacity-70'>
                     {service?.title}
                   </h3>
                   <p className='text-[#4D3F36] text-xl md:text-[32px]'>
@@ -188,7 +188,7 @@ export default function Home() {
                       className='flex border-b border-b-[#FFE0CC] items-center p-4 cursor-pointer'
                       onClick={() => toggleExpand(service.id, capability.id)}
                     >
-                      <div className='w-[175px] h-[120px] md:w-[175px] md:h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4 md:mr-6'>
+                      <div className='w-[175px] h-[120px] md:w-[175px] md:h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4 md:mr-6 group-hover:opacity-70'>
                         <Image
                           src={capability.image || "/placeholder.svg"}
                           alt={capability.title}
@@ -199,7 +199,7 @@ export default function Home() {
                       </div>
 
                       <div className='flex-grow'>
-                        <h3 className='text-[#B29D8F] text-base md:text-[28px]'>
+                        <h3 className='text-[#B29D8F] text-base md:text-[28px] group-hover:opacity-70'>
                           {capability.title}
                         </h3>
                       </div>
