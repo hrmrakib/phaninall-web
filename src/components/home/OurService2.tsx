@@ -15,7 +15,7 @@ export default function ServicesSection2() {
         </div>
 
         <div className='flex flex-wrap  gap-6'>
-          <div className='w-full md:w-1/2 lg:w-[32%]'>
+          <div className='w-full md:w-1/2 lg:w-[32%] transition-transform duration-300 ease-in-out'>
             <div className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow transform'>
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
@@ -53,7 +53,7 @@ export default function ServicesSection2() {
               </div>
             </div>
           </div>
-          <div className='w-full md:w-1/2 lg:w-[32%]'>
+          <div className='w-full md:w-1/2 lg:w-[32%] transition-transform duration-300 ease-in-out'>
             <div className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow transform'>
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
@@ -91,7 +91,7 @@ export default function ServicesSection2() {
               </div>
             </div>
           </div>
-          <div className='w-full md:w-1/2 lg:w-[32%]'>
+          <div className='w-full md:w-1/2 lg:w-[32%] transition-transform duration-300 ease-in-out'>
             <div className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow transform'>
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
@@ -129,7 +129,7 @@ export default function ServicesSection2() {
               </div>
             </div>
           </div>
-          <div className='w-full md:w-1/2 lg:w-[32%]'>
+          <div className='w-full md:w-1/2 lg:w-[32%] transition-transform duration-300 ease-in-out'>
             <div className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow transform'>
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
@@ -167,7 +167,7 @@ export default function ServicesSection2() {
               </div>
             </div>
           </div>
-          <div className='w-full md:w-1/2 lg:w-[32%]'>
+          <div className='w-full md:w-1/2 lg:w-[32%] transition-transform duration-300 ease-in-out'>
             <div className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow transform'>
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
@@ -205,7 +205,7 @@ export default function ServicesSection2() {
               </div>
             </div>
           </div>
-          <div className='w-full md:w-1/2 lg:w-[32%]'>
+          <div className='w-full md:w-1/2 lg:w-[32%] transition-transform duration-300 ease-in-out'>
             <div className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow transform'>
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
