@@ -99,6 +99,63 @@ function CodeService({ service }: { service: IServiceData }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    // <div
+    //   onClick={() => setIsOpen(!isOpen)}
+    //   className='group hover:py-7 w-full p-5 mb-[17px] bg-white bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 transition-transform duration-150 cursor-pointer'
+    // >
+    //   <div className='text-center'>
+    //     <div
+    //       className={`${
+    //         isOpen ? "bg-[#FF6C0A] py-6" : "hover:py-7 hover:bg-[#FF6C0A]"
+    //       } rounded-md transition-all duration-100`}
+    //     >
+    //       <p
+    //         className={`border-b ${
+    //           isOpen
+    //             ? "border-[#FFD1B2] text-white"
+    //             : "border-[#FFD1B2] text-black"
+    //         } mx-[5px] text-[#1A0D05] pb-2 hover:text-white group-hover:text-white font-bold`}
+    //       >
+    //         Codes
+    //       </p>
+    //       <p
+    //         className={`${
+    //           isOpen ? "text-white" : "text-[#1A0D05]"
+    //         } font-bold group-hover:text-white text-base pt-2`}
+    //       >
+    //         {code}
+    //       </p>
+    //     </div>
+
+    //     {isOpen && (
+    //       <div className='flex flex-col mt-4'>
+    //         <p className='mt-2 text-left'>{description}</p>
+
+    //         <Link
+    //           className='mt-5 text-[#FF6C0A] text-lg ml-auto flex items-center gap-2'
+    //           href={"/"}
+    //         >
+    //           View more{" "}
+    //           <svg
+    //             xmlns='http://www.w3.org/2000/svg'
+    //             width='24'
+    //             height='24'
+    //             viewBox='0 0 24 24'
+    //             fill='none'
+    //             stroke='currentColor'
+    //             stroke-width='2'
+    //             stroke-linecap='round'
+    //             stroke-linejoin='round'
+    //             className='lucide lucide-arrow-down-right-icon lucide-arrow-down-right -rotate-90'
+    //           >
+    //             <path d='m7 7 10 10' />
+    //             <path d='M17 7v10H7' />
+    //           </svg>
+    //         </Link>
+    //       </div>
+    //     )}
+    //   </div>
+    // </div>
     <div
       onClick={() => setIsOpen(!isOpen)}
       className='group hover:py-7 w-full p-5 mb-[17px] bg-white bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl px-4 py-7 transition-transform duration-150 cursor-pointer'
@@ -106,7 +163,9 @@ function CodeService({ service }: { service: IServiceData }) {
       <div className='text-center'>
         <div
           className={`${
-            isOpen ? "bg-[#FF6C0A] py-6" : "hover:py-7 hover:bg-[#FF6C0A]"
+            isOpen
+              ? "bg-[#FF6C0A] py-6"
+              : "group-hover:py-7 group-hover:bg-[#FF6C0A]"
           } rounded-md transition-all duration-100`}
         >
           <p
@@ -114,14 +173,14 @@ function CodeService({ service }: { service: IServiceData }) {
               isOpen
                 ? "border-[#FFD1B2] text-white"
                 : "border-[#FFD1B2] text-black"
-            } mx-[5px] text-[#1A0D05] pb-2 hover:text-white group-hover:text-white font-bold`}
+            } mx-[5px] text-[#1A0D05] pb-2 font-bold group-hover:text-white`}
           >
             Codes
           </p>
           <p
             className={`${
               isOpen ? "text-white" : "text-[#1A0D05]"
-            } font-bold group-hover:text-white text-base pt-2`}
+            } font-bold text-base pt-2 group-hover:text-white`}
           >
             {code}
           </p>

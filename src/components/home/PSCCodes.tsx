@@ -106,7 +106,7 @@ function CodeService({ service }: { service: IServiceData }) {
       <div className='text-center'>
         <div
           className={`${
-            isOpen ? "bg-[#FF6C0A] py-6" : "hover:py-7 hover:bg-[#FF6C0A]"
+            isOpen ? "bg-[#FF6C0A] py-6" : "group-hover:py-7 group-hover:bg-[#FF6C0A]"
           } rounded-md transition-all duration-100`}
         >
           <p
