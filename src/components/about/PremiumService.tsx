@@ -49,7 +49,7 @@ export default function Home() {
           title: "MLOps & Monitoring",
           description:
             "Continuous performance tracking, retraining, and optimization",
-          image: "/services/6.png",
+          image: "/services/mlops.png",
           expanded: false,
         },
       ],
@@ -66,21 +66,21 @@ export default function Home() {
           id: 1,
           title: "Use Case Identification",
           description: "Defining agent-based AI needs",
-          image: "/services/1.jpg",
+          image: "/services/use-case.jpg",
           expanded: false,
         },
         {
           id: 2,
           title: "Data & Model Selection",
           description: "Evaluating LLMs, RAG integration, and data processing",
-          image: "/services/2.jpg",
+          image: "/services/model-select.jpg",
           expanded: false,
         },
         {
           id: 3,
           title: "Autonomous Agent Development",
           description: "Building multi-agent workflows, memory, and reasoning",
-          image: "/services/3.jpg",
+          image: "/services/autonomous-agent.png",
           expanded: false,
         },
         {
@@ -95,7 +95,7 @@ export default function Home() {
           title: "Production Deployment & Scaling",
           description:
             "Deployment on cloud/edge infrastructure with continuous monitoring",
-          image: "/services/5.jpg",
+          image: "/services/production-deployment-scaling.jpg",
           expanded: false,
         },
       ],
@@ -194,7 +194,7 @@ export default function Home() {
                           alt={capability.title}
                           width={480}
                           height={480}
-                          className='w-full h-full object-cover'
+                          className='w-full h-full object-cover rounded-md'
                         />
                       </div>
 
