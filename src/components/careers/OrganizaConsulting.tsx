@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ArrowDownRight } from "lucide-react";
 
 interface Capability {
   id: number;
@@ -59,20 +60,20 @@ export default function OrganizeConsulting() {
     <section className='max-w-6xl mx-auto pb-20'>
       <h2 className='text-2xl md:text-[40px] font-medium text-center mb-8 md:mb-12'>
         <span className='text-[#FF6C0A]'>Why Orange </span>{" "}
-        <span className='text-[#4D3F36]'>Consulting</span>
+        <span className='text-[#4D3F36]'>Consulting?</span>
       </h2>
 
       <div className='space-y-6'>
         {capabilities.map((capability) => (
           <div
             key={capability.id}
-            className='bg-white  rounded-lg overflow-hidden'
+            className='bg-white rounded-lg overflow-hidden group'
           >
             <div
               className='flex items-center p-4 border-b border-b-[#FFE0CC] cursor-pointer'
               onClick={() => toggleExpand(capability.id)}
             >
-              <div className='w-[175px] h-[120px] md:w-[175px] md:h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4 md:mr-6'>
+              <div className='w-[175px] h-[120px] md:w-[175px] md:h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4 md:mr-6 group-hover:opacity-70 transition-opacity duration-300'>
                 <Image
                   src={capability.image || "/placeholder.svg"}
                   alt={capability.title}
@@ -83,44 +84,39 @@ export default function OrganizeConsulting() {
               </div>
 
               <div className='flex-grow'>
-                <h3 className='text-[#B29D8F] text-base md:text-[28px]'>
+                <h3 className='text-[#B29D8F] text-base md:text-[28px] group-hover:opacity-70'>
                   {capability.title}
                 </h3>
               </div>
 
               <button
-                className='w-10 h-10 md:w-12 md:h-12 rounded-full bg-transparent border border-[#B29D8F] p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-300'
+                className='w-10 h-10 md:w-10 md:h-10 rounded-full bg-transparent border border-[#B29D8F] p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-300'
                 aria-label={
                   capability.expanded ? "Collapse section" : "Expand section"
                 }
                 style={{
                   transform: capability.expanded
-                    ? "rotate(180deg)"
-                    : "rotate(0)",
+                    ? "rotate(-90deg)"
+                    : "rotate(0deg)",
                 }}
               >
-                <svg
-                  width='48'
-                  height='48'
-                  viewBox='0 0 48 48'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <rect width='48' height='48' rx='24' fill='#B29D8F' />
-                  <path
-                    d='M18.1668 18.1666L29.8335 29.8333M29.8335 29.8333V18.1666M29.8335 29.8333H18.1668'
-                    stroke='#4D3F36'
-                    stroke-width='1.5'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                  />
-                </svg>
+                <ArrowDownRight
+                  className={`${
+                    capability.expanded
+                      ? "bg-[#FF6C0A] text-white"
+                      : "bg-[#B29D8F]"
+                  } group-hover:bg-[#46362D group-hover:text-[#feffff] text-2xl rounded-full p-1 transition-all duration-500 ease-in-out ${
+                    !capability.expanded ? "group-hover:bg-[#46362D]" : ""
+                  }`}
+                />
               </button>
             </div>
 
             {capability.expanded && (
               <div className='px-4 pb-6 pt-2 ml-20 md:ml-26'>
-                <p className='text-[#555555]'>{capability.description}</p>
+                <p className='text-[#555555] transition-opacity duration-500 ease-in-out delay-200'>
+                  {capability.description}
+                </p>
               </div>
             )}
           </div>

@@ -1,11 +1,11 @@
-import ContactBanner from "@/components/contact/ContactBanner";
+// import ContactBanner from "@/components/contact/ContactBanner";
 import ContactUs from "@/components/share/ContactUs";
 import React from "react";
 
 const Contact = () => {
   return (
     <div>
-      <ContactBanner />
+      {/* <ContactBanner /> */}
 
       <ContactUs />
 

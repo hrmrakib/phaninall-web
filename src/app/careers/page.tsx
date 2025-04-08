@@ -1,4 +1,4 @@
-import CareersBanner from "@/components/careers/CareerBanner";
+// import CareersBanner from "@/components/careers/CareerBanner";
 import JobCard from "@/components/careers/JobCard";
 import OrganizeConsulting from "@/components/careers/OrganizaConsulting";
 import React from "react";
@@ -6,7 +6,7 @@ import React from "react";
 const Careers = () => {
   return (
     <div>
-      <CareersBanner />
+      {/* <CareersBanner /> */}
 
       <JobCard />
 

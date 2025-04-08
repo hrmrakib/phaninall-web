@@ -18,7 +18,7 @@ export default function Footer() {
               className='h-auto w-auto'
             />
           </div>
-          <div className="bg-transparent w-4"></div>
+          <div className='bg-transparent w-4'></div>
           <div className='bg-[#FF6C0A] py-4 px-6 flex-1'>
             <h2 className='text-[#FFFFFF] text-xl md:text-[44px] font-bold'>
               Orange Tech Consultants
@@ -198,14 +198,14 @@ export default function Footer() {
               Get In Touch
             </h3>
             <div className='space-y-3'>
-              <p className='text-[#331B0A] text-lg font-medium'>
+              <p className='text-[#331B0A] text-base font-medium'>
                 7827 Town Square Ave Suite 104-1167 Ofallon, MO 63368 United
                 States
               </p>
-              <p className='text-[#331B0A] text-lg font-medium'>
+              <p className='text-[#331B0A] text-base font-medium'>
                 Phone: +1 636-244-3219
               </p>
-              <p className='text-[#331B0A] text-lg font-medium'>
+              <p className='text-[#331B0A] text-base font-medium'>
                 Email: info@orangetechconsultants.com
               </p>
             </div>

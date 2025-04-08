@@ -4,17 +4,6 @@ import Image from "next/image";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
-// interface ServiceCardProps {
-//   id?: number;
-//   image: string;
-//   title: string;
-//   subtitle: string;
-//   alt: string;
-//   onClick?: () => void;
-//   handleToggle: (id: number | undefined) => void;
-//   extended: boolean;
-// }
-
 export default function Home() {
   const [services, setServices] = useState([
     {
@@ -27,49 +16,39 @@ export default function Home() {
       detail: [
         {
           id: 1,
-          title: "Machine Learning & AI Solutions",
-          description:
-            "Our team specializes in developing custom machine learning models and AI solutions tailored to your business needs. We leverage cutting-edge algorithms and techniques to extract valuable insights from your data.",
+          title: "Discovery & Strategy",
+          description: "Business case assessment and AI roadmap development",
           image: "/services/1.jpg",
           expanded: false,
         },
         {
           id: 2,
-          title: "Generative AI & Agentic AI",
-          description:
-            "We build advanced generative AI systems and autonomous agents that can create content, solve complex problems, and automate decision-making processes for your organization.",
+          title: "Data Engineering & Preparation",
+          description: "Data collection, cleaning, and feature engineering",
           image: "/services/2.jpg",
           expanded: false,
         },
         {
           id: 3,
-          title: "Cloud & Data Engineering",
+          title: "Model Development",
           description:
-            "Our cloud and data engineering expertise helps you build scalable, reliable infrastructure and data pipelines to support your AI and analytics initiatives.",
-          image: "/services/3.jpg",
-          expanded: false,
-        },
-        {
-          id: 4,
-          title: "MLOps & DevOps",
-          description:
-            "We implement robust MLOps and DevOps practices to streamline your development workflows, ensure model reliability, and accelerate deployment cycles.",
+            "Training, tuning, validation, and performance evaluation",
           image: "/services/4.jpg",
           expanded: false,
         },
         {
-          id: 5,
-          title: "SRE & Reliability Engineering",
+          id: 4,
+          title: "Deployment & Integration",
           description:
-            "Our Site Reliability Engineering practices ensure your systems remain available, scalable, and performant, even under high load or during critical operations.",
+            "API development, cloud deployment, and realtime inference",
           image: "/services/5.jpg",
           expanded: false,
         },
         {
-          id: 6,
-          title: "Full-Stack Development",
+          id: 5,
+          title: "MLOps & Monitoring",
           description:
-            "From front-end interfaces to back-end systems, our full-stack development team builds complete, integrated solutions that deliver exceptional user experiences.",
+            "Continuous performance tracking, retraining, and optimization",
           image: "/services/6.png",
           expanded: false,
         },
@@ -77,116 +56,46 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Generative AI Lifecycle",
-      subtitle: "Management",
+      title: "Agentic AI Project",
+      subtitle: "Lifecycle",
       image: "/about/2.png",
       alt: "Generative AI Lifecycle diagram",
       expanded: false,
       detail: [
         {
           id: 1,
-          title: "Machine Learning & AI Solutions",
-          description:
-            "Our team specializes in developing custom machine learning models and AI solutions tailored to your business needs. We leverage cutting-edge algorithms and techniques to extract valuable insights from your data.",
+          title: "Use Case Identification",
+          description: "Defining agent-based AI needs",
           image: "/services/1.jpg",
           expanded: false,
         },
         {
           id: 2,
-          title: "Generative AI & Agentic AI",
-          description:
-            "We build advanced generative AI systems and autonomous agents that can create content, solve complex problems, and automate decision-making processes for your organization.",
+          title: "Data & Model Selection",
+          description: "Evaluating LLMs, RAG integration, and data processing",
           image: "/services/2.jpg",
           expanded: false,
         },
         {
           id: 3,
-          title: "Cloud & Data Engineering",
-          description:
-            "Our cloud and data engineering expertise helps you build scalable, reliable infrastructure and data pipelines to support your AI and analytics initiatives.",
+          title: "Autonomous Agent Development",
+          description: "Building multi-agent workflows, memory, and reasoning",
           image: "/services/3.jpg",
           expanded: false,
         },
         {
           id: 4,
-          title: "MLOps & DevOps",
-          description:
-            "We implement robust MLOps and DevOps practices to streamline your development workflows, ensure model reliability, and accelerate deployment cycles.",
+          title: "Testing & Optimization",
+          description: "Benchmarking performance, implementing failsafes",
           image: "/services/4.jpg",
           expanded: false,
         },
         {
           id: 5,
-          title: "SRE & Reliability Engineering",
+          title: "Production Deployment & Scaling",
           description:
-            "Our Site Reliability Engineering practices ensure your systems remain available, scalable, and performant, even under high load or during critical operations.",
+            "Deployment on cloud/edge infrastructure with continuous monitoring",
           image: "/services/5.jpg",
-          expanded: false,
-        },
-        {
-          id: 6,
-          title: "Full-Stack Development",
-          description:
-            "From front-end interfaces to back-end systems, our full-stack development team builds complete, integrated solutions that deliver exceptional user experiences.",
-          image: "/services/6.png",
-          expanded: false,
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Agentic AI Project",
-      subtitle: "Lifecycle",
-      image: "/about/3.jpg",
-      alt: "Agent development lifecycle diagram",
-      expanded: false,
-      detail: [
-        {
-          id: 1,
-          title: "Machine Learning & AI Solutions",
-          description:
-            "Our team specializes in developing custom machine learning models and AI solutions tailored to your business needs. We leverage cutting-edge algorithms and techniques to extract valuable insights from your data.",
-          image: "/services/1.jpg",
-          expanded: false,
-        },
-        {
-          id: 2,
-          title: "Generative AI & Agentic AI",
-          description:
-            "We build advanced generative AI systems and autonomous agents that can create content, solve complex problems, and automate decision-making processes for your organization.",
-          image: "/services/2.jpg",
-          expanded: false,
-        },
-        {
-          id: 3,
-          title: "Cloud & Data Engineering",
-          description:
-            "Our cloud and data engineering expertise helps you build scalable, reliable infrastructure and data pipelines to support your AI and analytics initiatives.",
-          image: "/services/3.jpg",
-          expanded: false,
-        },
-        {
-          id: 4,
-          title: "MLOps & DevOps",
-          description:
-            "We implement robust MLOps and DevOps practices to streamline your development workflows, ensure model reliability, and accelerate deployment cycles.",
-          image: "/services/4.jpg",
-          expanded: false,
-        },
-        {
-          id: 5,
-          title: "SRE & Reliability Engineering",
-          description:
-            "Our Site Reliability Engineering practices ensure your systems remain available, scalable, and performant, even under high load or during critical operations.",
-          image: "/services/5.jpg",
-          expanded: false,
-        },
-        {
-          id: 6,
-          title: "Full-Stack Development",
-          description:
-            "From front-end interfaces to back-end systems, our full-stack development team builds complete, integrated solutions that deliver exceptional user experiences.",
-          image: "/services/6.png",
           expanded: false,
         },
       ],
@@ -256,8 +165,13 @@ export default function Home() {
                 </div>
               </div>
               <button
-                className='w-10 h-10 rotate-45 md:w-12 md:h-12 bg-[#FF6B00] rounded-full flex items-center justify-center self-end md:self-center flex-shrink-0'
+                className='w-10 h-10 rotate-45 md:w-12 md:h-12 bg-[#FF6B00] rounded-full flex items-center justify-center self-end md:self-center flex-shrink-0  transition-transform duration-300'
                 aria-label='Learn more'
+                style={{
+                  transform: service.expanded
+                    ? "rotate(-90deg)"
+                    : "rotate(0deg)",
+                }}
               >
                 <ArrowRight className='w-5 h-5 md:w-6 md:h-6 text-white' />
               </button>
@@ -268,7 +182,7 @@ export default function Home() {
                 {service?.detail?.map((capability) => (
                   <div
                     key={capability.id}
-                    className='bg-white transition rounded-lg overflow-hidden group' // parent group for hover effect
+                    className='bg-white transition rounded-lg overflow-hidden group'
                   >
                     <div
                       className='flex border-b border-b-[#FFE0CC] items-center p-4 cursor-pointer'

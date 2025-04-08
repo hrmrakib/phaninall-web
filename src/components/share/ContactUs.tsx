@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import type React from "react";
 
 import { useState, type FormEvent } from "react";
@@ -15,6 +16,8 @@ export default function ContactUs() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const pathname = usePathname();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,8 +52,14 @@ export default function ContactUs() {
     }, 1500);
   };
 
+  console.log(pathname);
+
   return (
-    <div className='bg-gradient-to-br from-orange-100 via-orange-50 to-orange-100 p-4 md:p-8 relative overflow-hidden my-[140px]'>
+    <div
+      className={`bg-gradient-to-br from-orange-100 via-orange-50 to-orange-100 p-4 md:p-8 relative overflow-hidden ${
+        pathname === "/contact" ? "mb-28" : "my-[140px]"
+      }`}
+    >
       <div className='text-center mb-24'>
         <h2 className='text-3xl md:text-[32px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
           Contact Us
