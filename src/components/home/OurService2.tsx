@@ -40,9 +40,7 @@ export default function ServicesSection2() {
                     multimedia, boosting creativity and efficiency.
                   </li>
                   <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
-                    <Dot className='w-20' /> AI-Powered Content Creation: Use
-                    generative AI to automate creating articles, designs, and
-                    multimedia, boosting creativity and efficiency.
+                    <Dot className='w-20' /> Enhances design workflows with AI-generated visuals and concepts.
                   </li>
                   <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
                     <Dot className='w-20' /> AI-Powered Content Creation: Use

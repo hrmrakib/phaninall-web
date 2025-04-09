@@ -100,6 +100,56 @@ export default function Home() {
         },
       ],
     },
+    {
+      id: 3,
+      title: "Generative AI Lifecycle Management",
+      subtitle: "Lifecycle",
+      image: "/about/1.jpg",
+      alt: "Generative AI Lifecycle diagram",
+      expanded: false,
+      detail: [
+        {
+          id: 1,
+          title: "Use Case Discovery & Strategic Alignment",
+          description:
+            "Identify generative AI opportunities and define success metrics aligned with business strategy",
+          image: "/services/use-case-discovery.jpg",
+          expanded: false,
+        },
+        {
+          id: 2,
+          title: "Data Curation & Prompt Engineering",
+          description:
+            "Curate datasets, engineer effective prompts, and ensure data quality for generative model training",
+          image: "/services/prompt-engineering.jpg",
+          expanded: false,
+        },
+        {
+          id: 3,
+          title: "Generative Model Development",
+          description:
+            "Train, fine-tune, and evaluate generative models using domain-specific data",
+          image: "/services/generative-model-development.jpg",
+          expanded: false,
+        },
+        {
+          id: 4,
+          title: "Integration & Scalable Deployment",
+          description:
+            "Deploy generative models via APIs and integrate into production systems with scalability in mind",
+          image: "/services/integration-scalable-deployment.jpg",
+          expanded: false,
+        },
+        {
+          id: 5,
+          title: "GenAI Ops & Responsible Monitoring",
+          description:
+            "Track performance, ensure ethical usage, manage drift, and retrain to maintain relevance and compliance",
+          image: "/services/genAI-ops-responsible-monitoring.png",
+          expanded: false,
+        },
+      ],
+    },
   ]);
 
   const handleToggle = (id: number) => {
