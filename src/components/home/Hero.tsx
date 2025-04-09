@@ -105,7 +105,7 @@ const Hero = () => {
               onClick={() => router.push("/contact")}
               className='text-xl bg-[#FF6C0A] border-[#FF6C0A] text-[#FFFFFF] hover:text-white hover:bg-[#ff6c0ae3] py-6 px-6 cursor-pointer'
             >
-              Connect Us
+              Contact Us
             </Button>
           </div>
         </div>
