@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function AboutUs() {
   return (
     <div className='w-full bg-gradient-to-br from-[#ff6c0a00] via-[#ff6c0a09] to-[#ff6c0a07]'>
-      <div className='container mx-auto px-4 py-12 md:py-20'>
+      <div className='container mx-auto lg:px-4 py-12 md:py-20'>
         <div className='text-center mb-8'>
           <h1 className='text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block'>
             ABOUT US
@@ -87,18 +87,18 @@ export default function AboutUs() {
           </div>
 
           <div className='space-y-6'>
-            <h2 className='text-3xl md:text-5xl font-semibold text-[#331B0A] mb-6'>
+            <h2 className='text-3xl md:text-5xl font-semibold text-[#331B0A] mb-6 p-2'>
               Orange Tech Consultants
             </h2>
 
-            <p className='text-[#4D3A2E] text-xl font-normal mb-6'>
+            <p className='text-[#4D3A2E] text-xl font-normal mb-6 p-2'>
               At Orange Tech Consultants, we redefine innovation in technology
               services. Specializing in AI/ML, Generative AI, DevSecOps, Cloud &
               Data Engineering, SRE, and Full Stack Development, we deliver
               cutting-edge solutions for a digital-first world.
             </p>
 
-            <p className='text-[#4D3A2E] text-xl font-normal mb-10'>
+            <p className='text-[#4D3A2E] text-xl font-normal mb-10 p-2'>
               We help businesses unlock their potential through custom
               solutions, automation, and modern web applications. With a focus
               on security, scalability, and performance, we navigate challenges
