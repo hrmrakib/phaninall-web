@@ -75,7 +75,7 @@ export default function JobCard() {
 
               <button
                 onClick={() => handleApply(job?.id)}
-                className='bg-[#FF6C0A] text-[#FFF] font-semibold px-6 py-2.5 rounded-md hover:bg-[#E05F00] transition-colors'
+                className='bg-[#FF6C0A] text-[#FFF] font-semibold px-6 py-2.5 rounded-md hover:bg-[#E05F00] transition-colors cursor-pointer'
               >
                 Apply Now
               </button>
