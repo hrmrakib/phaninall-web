@@ -88,7 +88,7 @@ export default function ContactUs() {
                     htmlFor='firstName'
                     className='block text-[#4C3A2E] text-base mb-1'
                   >
-                    Your Mail
+                    Your First Name
                   </label>
                   <input
                     type='text'
@@ -107,7 +107,7 @@ export default function ContactUs() {
                     htmlFor='lastName'
                     className='block text-[#4C3A2E] text-base mb-1'
                   >
-                    Your Phone
+                    Your Last Name
                   </label>
                   <input
                     type='text'
