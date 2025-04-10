@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import type React from "react";
-
-import { useState, type FormEvent } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef, useState, type FormEvent } from "react";
+import toast from "react-hot-toast";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ export default function ContactUs() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const pathname = usePathname();
+  const form = useRef<HTMLFormElement | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,11 +35,27 @@ export default function ContactUs() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // Send the email through EmailJS
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form.current!, // Form reference passed here
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
 
-    console.log("Form submitted:", formData);
-    setSubmitSuccess(true);
+      if (result.status === 200) {
+        toast.success("Successfully sent your message!");
+        setSubmitSuccess(true);
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      toast.error("Error sending message: " + errorMessage);
+      console.log(error);
+    }
+
     setIsSubmitting(false);
 
     // Reset form after 3 seconds
@@ -52,8 +70,6 @@ export default function ContactUs() {
     }, 1500);
   };
 
-  console.log(pathname);
-
   return (
     <div
       className={`bg-gradient-to-br from-orange-100 via-orange-50 to-orange-100 p-4 md:p-8 relative overflow-hidden ${
@@ -67,7 +83,6 @@ export default function ContactUs() {
         </h2>
       </div>
 
-      {/* <div className='container mx-auto bg-[url(/contact.png)] bg-cover bg-center bg-no-repeat'> */}
       <div className='relative container mx-auto flex justify-center items-center'>
         <div className='absolute left-0 z-0 p-10'>
           <Image src='/contact.png' alt='contact' width={1000} height={1000} />
@@ -81,7 +96,7 @@ export default function ContactUs() {
               Get In Touch
             </h3>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} ref={form}>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                 <div>
                   <label
@@ -164,7 +179,7 @@ export default function ContactUs() {
                 <button
                   type='submit'
                   disabled={isSubmitting}
-                  className={`px-6 py-3 bg-[#FF6C0A] text-white font-medium rounded-lg transition-all
+                  className={`px-6 py-3 bg-[#FF6C0A] text-white font-medium rounded-lg transition-all cursor-pointer 
                     ${
                       isSubmitting
                         ? "opacity-70 cursor-not-allowed"

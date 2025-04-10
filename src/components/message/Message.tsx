@@ -38,9 +38,20 @@ export default function ChatbotInterface() {
             {
               parts: [
                 {
-                  text: `You are a helpful AI assistant. Respond to the user in a friendly and professional manner.
-              Keep responses concise but helpful (1-3 sentences maximum unless more detail is requested
+                  text: `Orange Tech Consultants
+At Orange Tech Consultants, we redefine innovation in technology services. Specializing in AI/ML, Generative AI, DevSecOps, Cloud & Data Engineering, SRE, and Full Stack Development, we deliver cutting-edge solutions for a digital-first world.
+
+We help businesses unlock their potential through custom solutions, automation, and modern web applications. With a focus on security, scalability, and performance, we navigate challenges and drive lasting success.
               
+
+Get In Touch
+7827 Town Square Ave Suite 104-1167 Ofallon, MO 63368 United States
+
+Phone: +1 636-244-3219
+
+Email: info@orangetechconsultants.com
+
+
               User: ${userMessage}`,
                 },
               ],
