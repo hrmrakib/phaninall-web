@@ -17,7 +17,7 @@ const services = [
   },
   {
     id: 2,
-    title: "Generative AI",
+    title: "AI & MLOps",
     image: "/service.svg",
     features: [
       "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
@@ -27,7 +27,7 @@ const services = [
   },
   {
     id: 3,
-    title: "Generative AI",
+    title: "Site Reliability Engineering (SRE)",
     image: "/service.svg",
     features: [
       "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
@@ -37,32 +37,32 @@ const services = [
   },
   {
     id: 4,
-    title: "Generative AI",
+    title: "Cloud Infrastructure Management",
     image: "/service.svg",
     features: [
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      "Cloud-Based Solutions: Implement scalable cloud infrastructure to ensure system availability, reliability, and performance.",
+      "Efficient Resource Allocation: Optimize cloud resource usage to reduce costs and improve system efficiency.",
+      "Automated Monitoring and Alerts: Set up automated alerts to detect and resolve potential issues proactively.",
     ],
   },
   {
     id: 5,
-    title: "Generative AI",
+    title: "DevOps Automation",
     image: "/service.svg",
     features: [
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      "CI/CD Pipeline Integration: Automate the software development lifecycle to increase deployment speed and quality.",
+      "Infrastructure as Code: Implement IAC to manage cloud infrastructure more effectively.",
+      "Automated Testing and Validation: Reduce human errors and ensure consistent quality with automated testing.",
     ],
   },
   {
     id: 6,
-    title: "Generative AI",
+    title: "Cybersecurity Solutions",
     image: "/service.svg",
     features: [
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      "Threat Detection and Response: Use AI-driven tools to identify and respond to security threats in real-time.",
+      "Data Encryption: Ensure the protection of sensitive data with end-to-end encryption.",
+      "Compliance and Auditing: Automate compliance processes to meet regulatory standards and provide audit trails.",
     ],
   },
 ];
@@ -73,7 +73,7 @@ export default function ServicesSection2() {
       <div className='container mx-auto'>
         <div className='text-center mb-12'>
           <h2 className='text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
-            Our Service
+            Our Services
             <div className='h-0.5 w-12 bg-orange-500 absolute left-1/2 transform -translate-x-1/2 bottom-0 mt-1'></div>
           </h2>
         </div>
@@ -333,7 +333,7 @@ export default function ServicesSection2() {
                       />
                     </div>
                     <h3 className='text-2xl font-bold text-[#1A0D05]'>
-                      Generative AI
+                      {service?.title}
                     </h3>
                   </div>
 

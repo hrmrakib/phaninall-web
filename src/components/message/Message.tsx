@@ -1,76 +1,65 @@
 "use client";
 
 import type React from "react";
-
 import { useState, useRef, useEffect } from "react";
 import { Bot, MoreVertical, X, Send } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import axios from "axios";
 
 type Message = {
   id: number;
   text: string;
   isUser: boolean;
 };
-const Message = () => {
-  const [showChatTooltip, setShowChatTooltip] = useState(false);
 
+// AIzaSyAAqfA0f2nbOjMPPKKGR_qQh2K3Ag3X2w0
+
+export default function ChatbotInterface() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "I'm looking for a wireless headset. Any recommendations?",
-      isUser: true,
-    },
-    {
-      id: 2,
-      text: "👋 We have a great selection of wireless headsets. For what purpose do you mostly need it—gaming, music, or calls?",
-      isUser: false,
-    },
-    {
-      id: 3,
-      text: "Mostly for calls and some music. I'd like good sound quality and a comfortable fit.",
-      isUser: true,
-    },
-    {
-      id: 4,
-      text: "Got it! For calls and music, I'd recommend our ProSound 360 headset. It has noise-canceling features and soft ear cushions for long wear. Plus, it has up to 20 hours of battery life on a single charge! Would you like to know the price?",
-      isUser: false,
-    },
-    {
-      id: 5,
-      text: "Yes, please. What's the price?",
-      isUser: true,
-    },
-    {
-      id: 6,
-      text: "The ProSound 360 is currently $89.99. We also have a 15% discount running this week. Would you like to place an order or explore other models?",
-      isUser: false,
-    },
-    {
-      id: 7,
-      text: "That sounds good. Are there any models with a foldable design?",
-      isUser: true,
-    },
-    {
-      id: 8,
-      text: "Absolutely! Our FlexTone X2 has a foldable design, great for travel. It also features dual microphones and touch controls. Would you like a comparison between this and the ProSound 360?",
-      isUser: false,
-    },
-    {
-      id: 9,
-      text: "Yes, a comparison would be helpful.",
-      isUser: true,
-    },
-    {
-      id: 10,
-      text: "Here’s a quick comparison: ProSound 360 - better for long calls and comfort; FlexTone X2 - more portable with similar sound quality. Both have noise-canceling. Price-wise, FlexTone X2 is $10 cheaper. Which one feels like a better fit for you?",
+      text: "Hello! I'm your AI assistant. How can I help you today?",
       isUser: false,
     },
   ]);
   const [newMessage, setNewMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const handleSendMessage = () => {
+  const generateResponse = async (userMessage: string) => {
+    setIsLoading(true);
+    try {
+      const response = await axios({
+        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDu6a0pC7BxjvDMLsIAnaPaSmJDPGOwn1c",
+        method: "post",
+        data: {
+          contents: [
+            {
+              parts: [
+                {
+                  text: `You are a helpful AI assistant. Respond to the user in a friendly and professional manner.
+              Keep responses concise but helpful (1-3 sentences maximum unless more detail is requested
+              
+              User: ${userMessage}`,
+                },
+              ],
+            },
+          ],
+        },
+      });
+
+      const botResponse = response.data.candidates[0].content.parts[0].text;
+      return botResponse;
+    } catch (error) {
+      console.error("Error calling Gemini API:", error);
+      return "I'm sorry, I encountered an error processing your request. Please try again later.";
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleSendMessage = async () => {
     if (newMessage.trim() === "") return;
 
     // Add user message
@@ -82,15 +71,15 @@ const Message = () => {
     setMessages([...messages, userMessage]);
     setNewMessage("");
 
-    // Simulate bot response after a short delay
-    setTimeout(() => {
-      const botResponse: Message = {
-        id: messages.length + 2,
-        text: "Thank you for your interest! The ProSound 360 is priced at $129.99. Would you like me to add it to your cart?",
-        isUser: false,
-      };
-      setMessages((prev) => [...prev, botResponse]);
-    }, 1000);
+    // Get bot response
+    const botResponse = await generateResponse(newMessage);
+
+    const botMessage: Message = {
+      id: messages.length + 2,
+      text: botResponse,
+      isUser: false,
+    };
+    setMessages((prev) => [...prev, botMessage]);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -101,7 +90,6 @@ const Message = () => {
   };
 
   useEffect(() => {
-    // Scroll to bottom when messages change
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
@@ -110,101 +98,16 @@ const Message = () => {
   };
 
   return (
-    <>
-      <div className='fixed bottom-6 right-6 z-50'>
-        <div className='relative'>
-          {showChatTooltip && (
-            <div className='absolute bottom-full right-0 mb-2 bg-white rounded-lg shadow-lg p-3 w-48 text-sm'>
-              Chat with us! We&apos;re online and ready to help.
-              <div className='absolute bottom-0 right-4 transform translate-y-1/2 rotate-45 w-2 h-2 bg-white'></div>
-            </div>
-          )}
-          <button
-            onClick={toggleChat}
-            className='transition-colors cursor-pointer'
-            onMouseEnter={() => setShowChatTooltip(true)}
-            onMouseLeave={() => setShowChatTooltip(false)}
-          >
-            <svg
-              width='110'
-              height='110'
-              viewBox='0 0 110 110'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <g filter='url(#filter0_d_304_18)'>
-                <rect
-                  x='15'
-                  y='5'
-                  width='80'
-                  height='80'
-                  rx='40'
-                  fill='#FF6C0A'
-                  shape-rendering='crispEdges'
-                />
-                <path
-                  d='M73.1818 38.6361C73.1818 32.1091 67.8906 26.8179 61.3636 26.8179C57.5765 26.8179 54.2055 28.6039 52.0427 31.3764C61.2674 31.7331 68.6363 39.324 68.6363 48.6361C68.6363 48.8366 68.6329 49.0364 68.6261 49.2353L69.2302 49.3969C70.9872 49.867 72.5946 48.2597 72.1245 46.5027L71.8929 45.6372C71.7058 44.938 71.8183 44.1993 72.119 43.541C72.8014 42.0469 73.1818 40.3859 73.1818 38.6361Z'
-                  fill='white'
-                />
-                <path
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  d='M65.909 48.6361C65.909 56.6693 59.3968 63.1815 51.3636 63.1815C49.1172 63.1815 46.9898 62.6723 45.0904 61.763C44.4376 61.4504 43.698 61.3407 42.9988 61.5278L40.7697 62.1242C39.0127 62.5943 37.4053 60.9869 37.8754 59.23L38.4719 57.0008C38.6589 56.3016 38.5492 55.562 38.2367 54.9092C37.3273 53.0099 36.8181 50.8824 36.8181 48.6361C36.8181 40.6028 43.3303 34.0906 51.3636 34.0906C59.3968 34.0906 65.909 40.6028 65.909 48.6361ZM44.9999 50.4542C46.0041 50.4542 46.8181 49.6402 46.8181 48.6361C46.8181 47.6319 46.0041 46.8179 44.9999 46.8179C43.9958 46.8179 43.1818 47.6319 43.1818 48.6361C43.1818 49.6402 43.9958 50.4542 44.9999 50.4542ZM51.3636 50.4542C52.3677 50.4542 53.1818 49.6402 53.1818 48.6361C53.1818 47.6319 52.3677 46.8179 51.3636 46.8179C50.3594 46.8179 49.5454 47.6319 49.5454 48.6361C49.5454 49.6402 50.3594 50.4542 51.3636 50.4542ZM57.7272 50.4542C58.7314 50.4542 59.5454 49.6402 59.5454 48.6361C59.5454 47.6319 58.7314 46.8179 57.7272 46.8179C56.7231 46.8179 55.909 47.6319 55.909 48.6361C55.909 49.6402 56.7231 50.4542 57.7272 50.4542Z'
-                  fill='white'
-                />
-              </g>
-              <defs>
-                <filter
-                  id='filter0_d_304_18'
-                  x='-1'
-                  y='-11'
-                  width='112'
-                  height='121'
-                  filterUnits='userSpaceOnUse'
-                  color-interpolation-filters='sRGB'
-                >
-                  <feFlood flood-opacity='0' result='BackgroundImageFix' />
-                  <feColorMatrix
-                    in='SourceAlpha'
-                    type='matrix'
-                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                    result='hardAlpha'
-                  />
-                  <feOffset dy='10' />
-                  <feGaussianBlur stdDeviation='7.5' />
-                  <feComposite in2='hardAlpha' operator='out' />
-                  <feColorMatrix
-                    type='matrix'
-                    values='0 0 0 0 0.391667 0 0 0 0 0.169396 0 0 0 0 0.0212153 0 0 0 0.18 0'
-                  />
-                  <feBlend
-                    mode='normal'
-                    in2='BackgroundImageFix'
-                    result='effect1_dropShadow_304_18'
-                  />
-                  <feBlend
-                    mode='normal'
-                    in='SourceGraphic'
-                    in2='effect1_dropShadow_304_18'
-                    result='shape'
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </button>
-        </div>
-      </div>
-      {/* // message box */}
-      <>
-        {isOpen && (
-          <div className='z-999 fixed bottom-[135px] right-4 md:right-8 w-full max-w-md rounded-lg overflow-hidden shadow-lg bg-[#FFF0E6] border border-[#FFD0B0]'>
-            {/* Header */}
+    <div className='z-[999]'>
+      {isOpen && (
+        <div className=''>
+          <div className='fixed bottom-[120px] z-[999] lg:right-8  w-full max-w-md rounded-lg overflow-hidden shadow-lg bg-[#FFF0E6] border border-[#FFD0B0]'>
             <div className='bg-[#FFBB85] p-3 flex items-center justify-between'>
               <div className='flex items-center gap-2'>
                 <div className='bg-[#FF6B00] p-1.5 rounded-full'>
                   <Bot className='h-5 w-5 text-white' />
                 </div>
-                <span className='font-medium text-lg text-black'>Chatbot</span>
+                <span className='font-medium text-black'>Chatbot</span>
               </div>
               <div className='flex items-center gap-2'>
                 <Button
@@ -212,7 +115,7 @@ const Message = () => {
                   size='icon'
                   className='h-8 w-8 rounded-full'
                 >
-                  <MoreVertical className='h-6 w-6' />
+                  <MoreVertical className='h-5 w-5' />
                 </Button>
                 <Button
                   variant='ghost'
@@ -220,14 +123,13 @@ const Message = () => {
                   className='h-8 w-8 rounded-full'
                   onClick={toggleChat}
                 >
-                  <X className='h-6 w-6' />
+                  <X className='h-5 w-5' />
                 </Button>
               </div>
             </div>
 
-            {/* Chat messages */}
             <div className='h-96 overflow-y-auto p-3 bg-[#FFF0E6]'>
-              <div className='flex flex-col gap-6'>
+              <div className='flex flex-col gap-3'>
                 {messages.map((message) => (
                   <div
                     key={message.id}
@@ -251,11 +153,31 @@ const Message = () => {
                     </div>
                   </div>
                 ))}
+                {isLoading && (
+                  <div className='flex justify-start'>
+                    <div className='mr-2 bg-[#FF6B00] p-1.5 rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0'>
+                      <Bot className='h-5 w-5 text-white' />
+                    </div>
+                    <div className='max-w-[80%] p-3 rounded-lg bg-[#FF6B00] text-white'>
+                      <div className='flex gap-1'>
+                        <div className='w-2 h-2 rounded-full bg-white animate-bounce'></div>
+                        <div
+                          className='w-2 h-2 rounded-full bg-white animate-bounce'
+                          style={{ animationDelay: "0.2s" }}
+                        ></div>
+                        <div
+                          className='w-2 h-2 rounded-full bg-white animate-bounce'
+                          style={{ animationDelay: "0.4s" }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <div ref={messagesEndRef} />
               </div>
             </div>
 
-            {/* Input area */}
+            {/* {/ Input area /} */}
             <div className='p-3 border-t border-[#FFD0B0] bg-[#FFF0E6]'>
               <div className='flex items-center gap-2'>
                 <input
@@ -265,20 +187,97 @@ const Message = () => {
                   value={newMessage}
                   onChange={(e) => setNewMessage(e.target.value)}
                   onKeyDown={handleKeyDown}
+                  disabled={isLoading}
                 />
                 <Button
                   onClick={handleSendMessage}
-                  className='bg-transparent hover:bg-transparent p-2 cursor-pointer'
+                  className='bg-transparent hover:bg-transparent p-2'
+                  disabled={isLoading}
                 >
-                  <Send className='h-9 w-9 text-[#FF6B00]' />
+                  <Send className='h-6 w-6 text-[#FF6B00]' />
                 </Button>
               </div>
             </div>
           </div>
-        )}
-      </>
-    </>
-  );
-};
+        </div>
+      )}
 
-export default Message;
+      {/* {/ Chat button /} */}
+      <button
+        onClick={toggleChat}
+        className='fixed z-[999] bottom-0 right-3  text-white p-4 rounded-full transition-colors cursor-pointer'
+      >
+        {/* <div className='relative'>
+          <Bot className='h-6 w-6' /> gfgd
+        </div> */}
+
+        <svg
+          width='110'
+          height='110'
+          viewBox='0 0 110 110'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <g filter='url(#filter0_d_580_256)'>
+            <rect
+              x='15'
+              y='5'
+              width='80'
+              height='80'
+              rx='40'
+              fill='#FF6C0A'
+              shape-rendering='crispEdges'
+            />
+            <path
+              d='M73.1815 38.6365C73.1815 32.1095 67.8903 26.8184 61.3633 26.8184C57.5763 26.8184 54.2053 28.6044 52.0424 31.3769C61.2671 31.7336 68.6361 39.3245 68.6361 48.6365C68.6361 48.8371 68.6326 49.0369 68.6259 49.2358L69.23 49.3974C70.9869 49.8675 72.5943 48.2601 72.1242 46.5032L71.8926 45.6377C71.7056 44.9385 71.818 44.1998 72.1187 43.5415C72.8012 42.0474 73.1815 40.3864 73.1815 38.6365Z'
+              fill='white'
+            />
+            <path
+              fill-rule='evenodd'
+              clip-rule='evenodd'
+              d='M65.9088 48.6365C65.9088 56.6698 59.3966 63.182 51.3633 63.182C49.117 63.182 46.9895 62.6728 45.0902 61.7634C44.4373 61.4509 43.6977 61.3412 42.9986 61.5283L40.7694 62.1247C39.0124 62.5948 37.4051 60.9874 37.8752 59.2305L38.4716 57.0013C38.6587 56.3021 38.549 55.5625 38.2364 54.9097C37.3271 53.0104 36.8179 50.8829 36.8179 48.6365C36.8179 40.6033 43.3301 34.0911 51.3633 34.0911C59.3966 34.0911 65.9088 40.6033 65.9088 48.6365ZM44.9997 50.4547C46.0038 50.4547 46.8179 49.6407 46.8179 48.6365C46.8179 47.6324 46.0038 46.8184 44.9997 46.8184C43.9955 46.8184 43.1815 47.6324 43.1815 48.6365C43.1815 49.6407 43.9955 50.4547 44.9997 50.4547ZM51.3633 50.4547C52.3675 50.4547 53.1815 49.6407 53.1815 48.6365C53.1815 47.6324 52.3675 46.8184 51.3633 46.8184C50.3592 46.8184 49.5451 47.6324 49.5451 48.6365C49.5451 49.6407 50.3592 50.4547 51.3633 50.4547ZM57.727 50.4547C58.7311 50.4547 59.5451 49.6407 59.5451 48.6365C59.5451 47.6324 58.7311 46.8184 57.727 46.8184C56.7228 46.8184 55.9088 47.6324 55.9088 48.6365C55.9088 49.6407 56.7228 50.4547 57.727 50.4547Z'
+              fill='white'
+            />
+          </g>
+          <defs>
+            <filter
+              id='filter0_d_580_256'
+              x='-1'
+              y='-11'
+              width='112'
+              height='121'
+              filterUnits='userSpaceOnUse'
+              color-interpolation-filters='sRGB'
+            >
+              <feFlood flood-opacity='0' result='BackgroundImageFix' />
+              <feColorMatrix
+                in='SourceAlpha'
+                type='matrix'
+                values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+                result='hardAlpha'
+              />
+              <feOffset dy='10' />
+              <feGaussianBlur stdDeviation='7.5' />
+              <feComposite in2='hardAlpha' operator='out' />
+              <feColorMatrix
+                type='matrix'
+                values='0 0 0 0 0.391667 0 0 0 0 0.169396 0 0 0 0 0.0212153 0 0 0 0.18 0'
+              />
+              <feBlend
+                mode='normal'
+                in2='BackgroundImageFix'
+                result='effect1_dropShadow_580_256'
+              />
+              <feBlend
+                mode='normal'
+                in='SourceGraphic'
+                in2='effect1_dropShadow_580_256'
+                result='shape'
+              />
+            </filter>
+          </defs>
+        </svg>
+      </button>
+    </div>
+  );
+}

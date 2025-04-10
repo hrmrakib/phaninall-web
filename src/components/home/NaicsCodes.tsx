@@ -4,7 +4,7 @@ import Masonry from "react-masonry-css";
 
 const services = [
   {
-    code: "541511",
+    code: "541811",
     title: "Custom Computer Programming Services",
     description:
       "Custom Computer Programming Services – Focuses on designing, developing, and implementing software solutions tailored to meet specific client needs. Includes custom applications, system software, and web development.",
@@ -34,7 +34,7 @@ const services = [
       "Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology) Involves advanced research and development activities in AI, machine learning, data science, and engineering projects.",
   },
   {
-    code: "541512",
+    code: "541517",
     title: "Computer Systems Design Services",
     description:
       "Data Processing, Hosting, and Related Services – Includes cloud computing services, data storage, and data hosting services.",
@@ -84,8 +84,8 @@ export default function NaicsCodes() {
             className='flex gap-[17px]'
             columnClassName='bg-clip-padding'
           >
-            {services.map((service) => (
-              <CodeService key={service.code} service={service} />
+            {services.map((service, indx) => (
+              <CodeService key={indx} service={service} />
             ))}
           </Masonry>
         </div>

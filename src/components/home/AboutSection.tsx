@@ -120,9 +120,9 @@ export default function AboutUs() {
                 <path
                   d='M1.83337 9.99992H18.1667M18.1667 9.99992L10 1.83325M18.1667 9.99992L10 18.1666'
                   stroke='white'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                 />
               </svg>
             </Link>

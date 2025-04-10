@@ -84,8 +84,8 @@ export default function PSCCODES() {
             className='flex gap-[17px]'
             columnClassName='bg-clip-padding'
           >
-            {services.map((service) => (
-              <CodeService key={service.code} service={service} />
+            {services.map((service, index) => (
+              <CodeService key={index} service={service} />
             ))}
           </Masonry>
         </div>
