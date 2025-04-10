@@ -1,37 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function JobCard() {
-  const router = useRouter();
-  // const jobs = [
-  //   {
-  //     id: 1,
-  //     title: "Machine Learning Engineer",
-  //     location: "Remote / New York, USA",
-  //     jobType: "Full-time / Part-time / Freelance",
-  //     salaryRange: "$60,000 - $80,000 per year",
-  //     availablePosts: 4,
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Machine Learning Engineer",
-  //     location: "Remote / New York, USA",
-  //     jobType: "Full-time / Part-time / Freelance",
-  //     salaryRange: "$60,000 - $80,000 per year",
-  //     availablePosts: 4,
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Machine Learning Engineer",
-  //     location: "Remote / New York, USA",
-  //     jobType: "Full-time / Part-time / Freelance",
-  //     salaryRange: "$60,000 - $80,000 per year",
-  //     availablePosts: 4,
-  //   },
-  // ];
-
   function handleApply(jobId: number) {
     console.log(jobId);
     window.open(
@@ -51,7 +22,7 @@ export default function JobCard() {
 
   const [jobsData, setJobsData] = useState<Job[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -71,7 +42,7 @@ export default function JobCard() {
         const data = await res.json();
         setJobsData(data);
       } catch (err) {
-        setError(err.message);
+        setError((err as Error)?.message || "An unknown error occurred");
         console.error("Error fetching jobs:", err);
       } finally {
         setLoading(false);
@@ -81,7 +52,10 @@ export default function JobCard() {
     fetchJobs();
   }, []);
 
-  if (loading) return <div className='text-center h-12 text-xl font-semibold'>Loading...</div>;
+  if (loading)
+    return (
+      <div className='text-center h-12 text-xl font-semibold'>Loading...</div>
+    );
   if (error) return <div>Error: {error}</div>;
 
   console.log({ jobsData });
