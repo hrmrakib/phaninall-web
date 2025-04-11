@@ -90,7 +90,7 @@ export default function OrganizeConsulting() {
               </div>
 
               <button
-                className='hidde w-10 h-10 md:w-10 md:h-10 rounded-full bg-transparent border border-[#B29D8F] p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-300'
+                className='w-10 h-10 md:w-10 md:h-10 rounded-full bg-transparent border border-[#B29D8F] p-1 flex items-center justify-center flex-shrink-0 transition-transform duration-300'
                 aria-label={
                   capability.expanded ? "Collapse section" : "Expand section"
                 }
