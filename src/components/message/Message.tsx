@@ -108,6 +108,8 @@ Email: info@orangetechconsultants.com
     setIsOpen(!isOpen);
   };
 
+  console.log(messages);
+
   return (
     <div className='z-[999]'>
       {isOpen && (
@@ -154,13 +156,29 @@ Email: info@orangetechconsultants.com
                       </div>
                     )}
                     <div
-                      className={`max-w-[80%] p-3 rounded-lg ${
+                      className={`max-w-[80%] p-1 rounded-lg ${
                         message.isUser
                           ? "bg-white text-black"
                           : "bg-[#FF6B00] text-white"
                       }`}
                     >
-                      <p className='text-sm'>{message.text}</p>
+                      {/* <p className='text-sm'>{message.text}</p>  */}
+
+                      {/* formatted response */}
+                      <div
+                        className={`max-w-full p-1 rounded-xl leading-relaxed text-sm ${
+                          message.isUser
+                            ? "bg-white text-black"
+                            : "bg-[#FF6B00] text-white"
+                        }`}
+                        dangerouslySetInnerHTML={{
+                          __html: message.text
+                            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                            .replace(/- (.*?)\n/g, "<li>$1</li>")
+                            .replace(/\n{2,}/g, "<br/><br/>")
+                            .replace(/\n/g, "<br/>"),
+                        }}
+                      />
                     </div>
                   </div>
                 ))}
