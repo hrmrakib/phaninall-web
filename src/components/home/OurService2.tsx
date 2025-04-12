@@ -10,9 +10,9 @@ const services = [
     title: "Generative AI",
     image: "/service.svg",
     features: [
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      "Leverage generative AI for high-quality text, image, and code creation to boost productivity, automate tasks, and inspire innovation.",
+      "Automate creative workflows with generative AI to generate articles, designs, and concepts while maintaining speed and originality.",
+      "Generate text, visuals, and media automatically using generative AI, streamlining content creation for design, blogs, and branding.",
     ],
   },
   {
@@ -20,9 +20,9 @@ const services = [
     title: "AI & MLOps",
     image: "/service.svg",
     features: [
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      "Integrate MLOps tools to streamline ML pipelines, improve model lifecycle management, and ensure scalable AI deployment practices.",
+      "Build and deploy AI models at scale with MLOps strategies that enhance performance monitoring, retraining, and collaboration.",
+      "Enable reliable ML operations by combining automation and orchestration tools with monitoring, CI/CD, and scalable deployment.",
     ],
   },
   {
@@ -30,9 +30,9 @@ const services = [
     title: "Site Reliability Engineering (SRE)",
     image: "/service.svg",
     features: [
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
-      "AI-Powered Content Creation: Use generative AI to automate creating articles, designs, and multimedia, boosting creativity and efficiency.",
+      "Improve uptime and service resilience by applying SRE principles such as SLAs, monitoring, automation, and incident response.",
+      "Use SRE best practices to automate recovery, reduce toil, and measure system health using SLIs and error budgets effectively.",
+      "SRE ensures service availability and performance through reliability targets, alerting systems, and continuous infrastructure tuning.",
     ],
   },
   {
@@ -40,9 +40,9 @@ const services = [
     title: "Cloud Infrastructure Management",
     image: "/service.svg",
     features: [
-      "Cloud-Based Solutions: Implement scalable cloud infrastructure to ensure system availability, reliability, and performance.",
-      "Efficient Resource Allocation: Optimize cloud resource usage to reduce costs and improve system efficiency.",
-      "Automated Monitoring and Alerts: Set up automated alerts to detect and resolve potential issues proactively.",
+      "Manage scalable cloud environments by automating provisioning, cost optimization, and real-time performance monitoring tools.",
+      "Use cloud-native tools to optimize infrastructure, manage resources efficiently, and scale systems automatically on demand.",
+      "Ensure secure, scalable infrastructure using monitoring, resource planning, and automated backups across cloud platforms.",
     ],
   },
   {
@@ -50,9 +50,9 @@ const services = [
     title: "DevOps Automation",
     image: "/service.svg",
     features: [
-      "CI/CD Pipeline Integration: Automate the software development lifecycle to increase deployment speed and quality.",
-      "Infrastructure as Code: Implement IAC to manage cloud infrastructure more effectively.",
-      "Automated Testing and Validation: Reduce human errors and ensure consistent quality with automated testing.",
+      "Automate CI/CD workflows to deliver faster, more reliable software releases with consistent testing, validation, and monitoring.",
+      "Use infrastructure as code (IaC) and pipeline automation to streamline deployment processes and reduce manual configuration errors.",
+      "Enhance delivery speed with DevOps tools that automate builds, testing, and deployments for continuous integration and delivery.",
     ],
   },
   {
@@ -60,13 +60,12 @@ const services = [
     title: "Cybersecurity Solutions",
     image: "/service.svg",
     features: [
-      "Threat Detection and Response: Use AI-driven tools to identify and respond to security threats in real-time.",
-      "Data Encryption: Ensure the protection of sensitive data with end-to-end encryption.",
-      "Compliance and Auditing: Automate compliance processes to meet regulatory standards and provide audit trails.",
+      "Detect threats in real-time using AI-powered tools and automate responses to defend critical systems against evolving attacks.",
+      "Secure sensitive data through encryption, identity access control, and proactive vulnerability management and patching tools.",
+      "Meet compliance requirements with automated audits, policy enforcement, and reporting for data protection and risk reduction.",
     ],
   },
 ];
-
 export default function ServicesSection2() {
   return (
     <div className='bg-gradient-to-br from-[#ff6c0a00] via-[#ff6c0a00] to-[#ff6c0a00] p-4 md:p-8'>
@@ -338,24 +337,55 @@ export default function ServicesSection2() {
                   </div>
 
                   <div className='mt-4'>
+                    {/* <ul className='list-disc space-y-2'>
+                      <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] h-auto overflow-hidden'>
+                        <Dot className='w-20' /> AI-Powered Content Creation:
+                        Use generative AI to automate creating articles,
+                        designs, and multimedia, boosting creativity and
+                        efficiency.
+                      </li>
+                      <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
+                        <Dot className='w-20' /> AI-Powered Content Creation:
+                        Use generative AI to automate creating articles,
+                        designs, and multimedia, boosting creativity and
+                        efficiency.
+                      </li>
+                      <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
+                        <Dot className='w-20' /> AI-Powered Content Creation:
+                        Use generative AI to automate creating articles,
+                        designs, and multimedia, boosting creativity and
+                        efficiency.
+                      </li>
+                    </ul> */}
+                    {/* {service.features?.map((feature: string, index: number) => (
+                      <ul key={index} className='list-disc space-y-2'>
+                        <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] h-auto overflow-hidden'>
+                          <Dot className='w-20' /> {feature}
+                        </li>
+                        <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
+                          <Dot className='w-20' /> AI-Powered Content Creation:
+                          Use generative AI to automate creating articles,
+                          designs, and multimedia, boosting creativity and
+                          efficiency.
+                        </li>
+                        <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
+                          <Dot className='w-20' /> AI-Powered Content Creation:
+                          Use generative AI to automate creating articles,
+                          designs, and multimedia, boosting creativity and
+                          efficiency.
+                        </li>
+                      </ul>
+                    ))} */}
+
                     <ul className='list-disc space-y-2'>
-                      <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05]   h-auto overflow-hidden'>
-                        <Dot className='w-20' /> AI-Powered Content Creation:
-                        Use generative AI to automate creating articles,
-                        designs, and multimedia, boosting creativity and
-                        efficiency.
+                      <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] h-auto overflow-hidden'>
+                        <Dot className='w-20' /> {service?.features[0]}
                       </li>
                       <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
-                        <Dot className='w-20' /> AI-Powered Content Creation:
-                        Use generative AI to automate creating articles,
-                        designs, and multimedia, boosting creativity and
-                        efficiency.
+                        <Dot className='w-20' /> {service?.features[1]}
                       </li>
                       <li className='flex items-start justify-start gap-1 text-base text-[#1A0D05] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden'>
-                        <Dot className='w-20' /> AI-Powered Content Creation:
-                        Use generative AI to automate creating articles,
-                        designs, and multimedia, boosting creativity and
-                        efficiency.
+                        <Dot className='w-20' /> {service?.features[2]}
                       </li>
                     </ul>
                   </div>
