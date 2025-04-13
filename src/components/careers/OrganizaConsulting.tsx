@@ -114,7 +114,7 @@ export default function OrganizeConsulting() {
 
             {capability.expanded && (
               <div className='px-4 pb-6 pt-2 ml-20 md:ml-26'>
-                <p className='text-[#555555] transition-opacity duration-500 ease-in-out delay-200'>
+                <p className='text-[#555555] text-xl transition-opacity duration-500 ease-in-out delay-200'>
                   {capability.description}
                 </p>
               </div>
