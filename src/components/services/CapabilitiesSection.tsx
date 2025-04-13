@@ -48,9 +48,9 @@ export default function CapabilitiesSection() {
     },
     {
       id: 5,
-      title: "Site Reliability Engineering & Reliability Engineering",
+      title: "Site Reliability Engineering ",
       description:
-        "At Orange Tech Consultants, Site Reliability Engineering and Reliability Engineering are key components of our approach to building and maintaining resilient, high-performing systems. We focus on ensuring that your infrastructure, applications, and services are reliable, scalable, and always available, even during traffic spikes or unexpected challenges. Our SRE practices combine software engineering with systems management to automate operations, reduce manual intervention, and proactively identify and address potential issues before they impact end-users. We implement robust monitoring, incident response, and disaster recovery strategies to guarantee continuous uptime and swift issue resolution. By applying these reliability engineering principles, we help businesses deliver seamless, high-quality user experiences while optimizing resource usage and maintaining system stability.",
+        "At Orange Tech Consultants, Site Reliability Engineering is key components of our approach to building and maintaining resilient, high-performing systems. We focus on ensuring that your infrastructure, applications, and services are reliable, scalable, and always available, even during traffic spikes or unexpected challenges. Our SRE practices combine software engineering with systems management to automate operations, reduce manual intervention, and proactively identify and address potential issues before they impact end-users. We implement robust monitoring, incident response, and disaster recovery strategies to guarantee continuous uptime and swift issue resolution. By applying these reliability engineering principles, we help businesses deliver seamless, high-quality user experiences while optimizing resource usage and maintaining system stability.",
       image: "/services/5.jpg",
       expanded: false,
     },
