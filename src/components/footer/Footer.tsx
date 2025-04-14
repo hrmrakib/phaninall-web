@@ -13,8 +13,8 @@ export default function Footer() {
             <Image
               src='/logo.svg'
               alt='Orange Tech Consultants Logo'
-              width={140}
-              height={40}
+              width={240}
+              height={240}
               className='h-auto w-auto'
             />
           </div>
@@ -29,11 +29,11 @@ export default function Footer() {
 
       {/* Main footer content */}
       <div className='relative z-10 bg-[url("/footer-bg.png")] bg-cover bg-center px-6 md:px-0 pt-8 md:pt-12'>
-        <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8'>
+        <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 lg:pl-10'>
           {/* Company info and social */}
           <div className='space-y-6'>
             <div className='max-w-xs'>
-              <p className='text-[#331B0A] font-light text-[28px]'>
+              <p className='text-[#443e39] font-light text-[28px]'>
                 We are <span className='font-bold'>dedicated</span> to providing
                 innovative and <br />
                 <span className='font-bold'>strategic IT solutions</span> that
@@ -149,43 +149,43 @@ export default function Footer() {
 
           {/* Useful links */}
           <div>
-            <h3 className='text-2xl font-bold text-[#331B0A] mb-4'>
+            <h3 className='text-2xl font-bold text-gray-800 mb-4'>
               Useful Link
             </h3>
             <nav className='space-y-2'>
               <Link
                 href='/'
-                className='block text-lg font-medium text-[#331B0A] hover:text-[#331B0A] transition-colors'
+                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
               >
                 Home
               </Link>
               <Link
                 href='/about'
-                className='block text-lg font-medium text-[#331B0A] hover:text-[#331B0A] transition-colors'
+                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
               >
                 About Us
               </Link>
               <Link
                 href='/services'
-                className='block text-lg font-medium text-[#331B0A] hover:text-[#331B0A] transition-colors'
+                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
               >
                 Our Services
               </Link>
               <Link
                 href='/capability'
-                className='block text-lg font-medium text-[#331B0A] hover:text-[#331B0A] transition-colors'
+                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
               >
                 Capability Statement
               </Link>
               <Link
                 href='/careers'
-                className='block text-lg font-medium text-[#331B0A] hover:text-[#331B0A] transition-colors'
+                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
               >
                 Careers
               </Link>
               <Link
                 href='/contact'
-                className='block text-lg font-medium text-[#331B0A] hover:text-[#331B0A] transition-colors'
+                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
               >
                 Contact
               </Link>
@@ -194,18 +194,18 @@ export default function Footer() {
 
           {/* Contact info */}
           <div>
-            <h3 className='text-2xl font-bold text-[#331B0A] mb-4'>
+            <h3 className='text-2xl font-bold text-gray-800 mb-4'>
               Get In Touch
             </h3>
             <div className='space-y-3'>
-              <p className='text-[#331B0A] text-base font-medium'>
+              <p className='text-gray-800 text-base font-medium'>
                 7827 Town Square Ave Suite 104-1167 Ofallon, MO 63368 United
                 States
               </p>
-              <p className='text-[#331B0A] text-base font-medium'>
+              <p className='text-gray-800 text-base font-medium'>
                 Phone: +1 636-244-3219
               </p>
-              <p className='text-[#331B0A] text-base font-medium'>
+              <p className='text-gray-800 text-base font-medium'>
                 Email: info@orangetechconsultants.com
               </p>
             </div>
