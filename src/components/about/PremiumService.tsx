@@ -307,7 +307,7 @@ export default function Home() {
         </div>
       </div>
 
-      <h1 className='text-center text-4xl md:text-5xl font-medium mb-10 md:mb-16'>
+      <h1 className='text-center text-4xl md:text-5xl font-medium mt-14 lg:mt-0 mb-10 md:mb-16'>
         <span className='text-[#FF6B00]'>Our </span>{" "}
         <span className='text-[#4A4A4A]'>Expertise</span>
       </h1>
