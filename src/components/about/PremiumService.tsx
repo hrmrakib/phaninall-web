@@ -214,7 +214,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className='md:absolute bottom-20 right-40 col-span-1g items-self-center group w-[240px] h-[220px] overflow-hidden rounded-3xl z-50'>
+              <div className='md:absolute bottom-24 right-40 col-span-1g items-self-center group w-[240px] h-[220px] overflow-hidden rounded-3xl z-50'>
                 <Image
                   src='/about/about-medium-img.png'
                   alt='Woman with notebook'
@@ -225,13 +225,13 @@ export default function Home() {
               </div>
 
               {/* Experience box */}
-              <div className='md:absolute -bottom-32 md:left-48 transform md:-translate-x-1/2 md:-translate-y-1/2 bg-[#F26B21] text-white p-6 rounded-lg w-full md:w-[170px] h-[210px] flex flex-col justify-center items-center z-10'>
+              {/* <div className='md:absolute -bottom-32 md:left-48 transform md:-translate-x-1/2 md:-translate-y-1/2 bg-[#F26B21] text-white p-6 rounded-lg w-full md:w-[170px] h-[210px] flex flex-col justify-center items-center z-10'>
                 <h3 className='text-5xl font-bold'>15+</h3>
                 <p className='text-center mt-2'>Years Of Experience</p>
-              </div>
+              </div> */}
 
               {/* Dotted pattern */}
-              <div className='hidden md:block absolute bottom-16 left-24 w-64 h-64 -z-50'>
+              {/* <div className='hidden md:block absolute bottom-16 left-24 w-64 h-64 -z-50'>
                 <div className='grid grid-cols-10 gap-2'>
                   {[...Array(200)].map((_, i) => (
                     <div
@@ -240,7 +240,7 @@ export default function Home() {
                     ></div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -251,8 +251,8 @@ export default function Home() {
                 ABOUT US
               </p>
 
-              <h1 className='text-5xl font-bold text-[#f8893f] leading-tight'>
-                Orange Tech Consultants
+              <h1 className='text-4xl md:text-5xl lg:text-6xl text-[#080808b9] font-bold tracking-tight'>
+                <span className='text-[#FF6C0A]'>Orange</span> Tech Consultants
               </h1>
 
               <div className='space-y-6 text-[#727272] text-base leading-[30px]'>

@@ -8,7 +8,7 @@ export default function AboutUs() {
       <div className='container mx-auto lg:px-4 py-12 md:py-20'>
         <div className='text-center mb-8'>
           <h1 className='text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block'>
-            ABOUT US
+            <span className="text-[#080808da]">Our</span> Mission
           </h1>
           <div className='h-1 w-16 bg-[#1A0D05] mx-auto mt-2'></div>
         </div>
@@ -87,9 +87,9 @@ export default function AboutUs() {
           </div>
 
           <div className='space-y-6'>
-            <h2 className='text-3xl md:text-5xl font-semibold text-[#331B0A] mb-6 p-2'>
-              Orange Tech Consultants
-            </h2>
+            <h1 className='text-4xl md:text-5xl lg:text-6xl text-[#080808b9] font-bold tracking-tight'>
+              <span className='text-[#FF6C0A]'>Orange</span> Tech Consultants
+            </h1>
 
             <p className='text-[#4D3A2E] text-xl font-normal mb-6 p-2'>
               At Orange Tech Consultants, we redefine innovation in technology

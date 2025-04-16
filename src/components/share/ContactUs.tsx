@@ -51,7 +51,8 @@ export default function ContactUs() {
         toast.error("Something went wrong. Please try again.");
       }
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      const errorMessage =
+        error instanceof Error ? error.message : "Unknown error";
       toast.error("Error sending message: " + errorMessage);
       console.log(error);
     }
@@ -78,7 +79,7 @@ export default function ContactUs() {
     >
       <div className='text-center mb-24'>
         <h2 className='text-3xl md:text-[32px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
-          Contact Us
+          Contact <span className='text-[#080808b9]'>Us</span>
           <div className='h-0.5 w-12 bg-[#303030] absolute left-1/2 transform -translate-x-1/2 bottom-0 mt-1'></div>
         </h2>
       </div>
@@ -103,7 +104,7 @@ export default function ContactUs() {
                     htmlFor='firstName'
                     className='block text-[#4C3A2E] text-base mb-1'
                   >
-                    Your First Name
+                    First Name
                   </label>
                   <input
                     type='text'
@@ -122,7 +123,7 @@ export default function ContactUs() {
                     htmlFor='lastName'
                     className='block text-[#4C3A2E] text-base mb-1'
                   >
-                    Your Last Name
+                    Last Name
                   </label>
                   <input
                     type='text'
