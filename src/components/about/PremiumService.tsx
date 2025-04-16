@@ -195,11 +195,11 @@ export default function Home() {
             <div className='relative h-full space-y-6'>
               {/* Top left image */}
               <div className='group w-full md:w-[312px] h-[370px] overflow-hidden rounded-3xl lg:ml-24 z-10'>
-                <Image
+                <img
                   src='/about/about-big-img.png'
                   alt='Woman with notebook'
-                  width={700}
-                  height={700}
+                  // width={700}
+                  // height={700}
                   className='object-cover w-full h-full transition-transform duration-700 group-hover:scale-110'
                 />
               </div>
