@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -205,21 +205,21 @@ export default function Home() {
               </div>
 
               <div className='md:absolute top-10 right-6 col-span-1g items-self-center group w-[240px] h-[220px] overflow-hidden rounded-3xl z-50'>
-                <Image
+                <img
                   src='/about/about-small-img.png'
                   alt='Woman with notebook'
-                  width={700}
-                  height={700}
+                  // width={700}
+                  // height={700}
                   className='object-cover w-full h-full transition-transform duration-700 group-hover:scale-110'
                 />
               </div>
 
               <div className='md:absolute bottom-24 right-40 col-span-1g items-self-center group w-[240px] h-[220px] overflow-hidden rounded-3xl z-50'>
-                <Image
+                <img
                   src='/about/about-medium-img.png'
                   alt='Woman with notebook'
-                  width={700}
-                  height={700}
+                  // width={700}
+                  // height={700}
                   className='object-cover w-full h-full transition-transform duration-700 group-hover:scale-110'
                 />
               </div>
@@ -324,10 +324,10 @@ export default function Home() {
             >
               <div className='flex flex-row items-center justify-center gap-4 md:gap-8  self-start md:self-center'>
                 <div className='w-24 h-24 md:w-32 md:h-32 relative flex-shrink-0 group-hover:opacity-70'>
-                  <Image
+                  <img
                     src={service.image || "/placeholder.svg"}
                     alt={service.alt}
-                    fill
+                    // fill
                     className='object-contain'
                   />
                 </div>
@@ -365,11 +365,11 @@ export default function Home() {
                       onClick={() => toggleExpand(service.id, capability.id)}
                     >
                       <div className='w-[140px] h-[90px] md:w-[175px] md:h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4 md:mr-6 group-hover:opacity-70'>
-                        <Image
+                        <img
                           src={capability.image || "/placeholder.svg"}
                           alt={capability.title}
-                          width={480}
-                          height={480}
+                          // width={480}
+                          // height={480}
                           className='w-full h-full object-cover rounded-md'
                         />
                       </div>
