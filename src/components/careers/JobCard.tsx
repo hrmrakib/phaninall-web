@@ -68,37 +68,43 @@ export default function JobCard() {
             key={index}
             className='rounded-xl border border-[#FFE8D9] bg-gradient-to-br from-[#ff6c0a07] via-[#ff6c0a13] to-[#ff6c0a4f] p-6'
           >
-            <h2 className='max-w-[90%] text-[#FF6B00] text-2xl md:text-[32px] font-semibold mb-4'>
+            <h2 className='max-w-[90%] text-[#FF6B00] text-2xl md:text-[26px] font-semibold mb-4'>
               {job?.title}
             </h2>
 
             <div className='space-y-2 mb-6'>
-              <div className='flex'>
-                <span className='font-semibold text-[#1A0E05]'>Location: </span>{" "}
-                <span className='text-[#1A0E05]'> {job?.location}</span>
+              <div className='flex items-center gap-1'>
+                <span className='font-semibold text-[#1A0E05] text-sm'>
+                  Location:{" "}
+                </span>{" "}
+                <span className='text-[#1A0E05] text-sm'> {job?.location}</span>
               </div>
 
-              <div className='flex'>
-                <span className='font-semibold text-[#1A0E05]'>Job Type:</span>
-                <span className='text-[#1A0E05]'>{job?.job_type}</span>
+              <div className='flex items-center gap-1'>
+                <span className='font-semibold text-[#1A0E05] text-sm'>
+                  Job Type:{" "}
+                </span>
+                <span className='text-[#1A0E05] text-sm'>{job?.job_type}</span>
               </div>
 
-              <div className='flex'>
-                <span className='font-semibold text-[#1A0E05]'>
+              <div className='flex items-center gap-1'>
+                <span className='font-semibold text-[#1A0E05] text-sm'>
                   Salary Range:
                 </span>
-                <span className='text-[#1A0E05]'>{job?.salary_max}</span>
+                <span className='text-[#1A0E05] text-sm'>
+                  {job?.salary_max}
+                </span>
               </div>
             </div>
 
             <div className='flex justify-between items-center'>
-              <div className='text-base text-[#1A0E05]'>
+              <div className='text-sm text-[#1A0E05]'>
                 Available Post: {job?.available_posts}
               </div>
 
               <button
                 onClick={() => handleApply(job?.id)}
-                className='bg-[#FF6C0A] text-[#FFF] font-semibold px-6 py-2.5 rounded-md hover:bg-[#E05F00] transition-colors cursor-pointer'
+                className='bg-[#FF6C0A] text-[#FFF] text-sm font-semibold px-6 py-2.5 rounded-md hover:bg-[#E05F00] transition-colors cursor-pointer'
               >
                 Apply Now
               </button>

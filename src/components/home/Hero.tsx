@@ -47,7 +47,7 @@ const Hero = () => {
               pathname === "/services" ? "text-[#FF6C0A]" : "text-[#000000]"
             }`}
           >
-            Our Services
+            Services
           </Link>
           <Link
             href='/capability'
@@ -86,8 +86,9 @@ const Hero = () => {
       {/* This section is for the home page */}
       <section className='container mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-8 items-center'>
         <div className='space-y-6'>
-          <h1 className='text-5xl md:text-6xl lg:text-7xl text-[#000000] font-bold tracking-tight'>
-            Orange Tech Consultants
+          <h1 className='text-4xl md:text-5xl lg:text-6xl text-[#080808b9] font-bold tracking-tight'>
+            <span className='text-[#FF6C0A]'>Orange</span> Tech <br />{" "}
+            Consultants
           </h1>
           <p className='text-lg text-black md:text-[#5A5A5A] max-w-lg'>
             To be a trusted leader in AI-driven technology solutions that

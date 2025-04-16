@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
           <div className='bg-transparent w-4'></div>
           <div className='bg-[#FF6C0A] py-4 px-6 flex-1'>
-            <h2 className='text-[#FFFFFF] text-xl md:text-[44px] font-bold'>
+            <h2 className='text-[#FFFFFF] text-xl md:text-[36px] font-bold'>
               Orange Tech Consultants
             </h2>
           </div>
@@ -32,17 +32,15 @@ export default function Footer() {
         <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 lg:pl-10'>
           {/* Company info and social */}
           <div className='space-y-6'>
-            <div className='max-w-xs'>
-              <p className='text-[#443e39] font-light text-[28px]'>
-                We are <span className='font-bold'>dedicated</span> to providing
-                innovative and <br />
-                <span className='font-bold'>strategic IT solutions</span> that
-                drive business <span className='font-bold'>success.</span>
+            <div className='max-w-[350px]'>
+              <p className='text-[#443e39] font-light text-xl'>
+                We are dedicated to providing innovative and strategic IT
+                solutions that drive business success.
               </p>
             </div>
 
             <div className='w-max space-y-2'>
-              <p className='text-[#331B0A] font-medium text-base border-b  border-b-[#331B0A]'>
+              <p className='text-[#331b0ae9] font-medium text-base border-b  border-b-[#331B0A]'>
                 Follow Us
               </p>
               <div className='flex space-x-4'>
@@ -149,43 +147,43 @@ export default function Footer() {
 
           {/* Useful links */}
           <div>
-            <h3 className='text-2xl font-bold text-gray-800 mb-4'>
+            <h3 className='text-xl font-bold text-[#000000a3] mb-4'>
               Useful Link
             </h3>
             <nav className='space-y-2'>
               <Link
                 href='/'
-                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
+                className='block text-base font-medium text-[#1e1d1caa] hover:text-[#331B0A] transition-colors'
               >
                 Home
               </Link>
               <Link
                 href='/about'
-                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
+                className='block text-base font-medium text-[#1e1d1caa] hover:text-[#331B0A] transition-colors'
               >
                 About Us
               </Link>
               <Link
                 href='/services'
-                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
+                className='block text-base font-medium text-[#1e1d1caa] hover:text-[#331B0A] transition-colors'
               >
-                Our Services
+                Services
               </Link>
               <Link
                 href='/capability'
-                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
+                className='block text-base font-medium text-[#1e1d1caa] hover:text-[#331B0A] transition-colors'
               >
                 Capability Statement
               </Link>
               <Link
                 href='/careers'
-                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
+                className='block text-base font-medium text-[#1e1d1caa] hover:text-[#331B0A] transition-colors'
               >
                 Careers
               </Link>
               <Link
                 href='/contact'
-                className='block text-lg font-medium text-[#443e39] hover:text-[#331B0A] transition-colors'
+                className='block text-base font-medium text-[#1e1d1caa] hover:text-[#331B0A] transition-colors'
               >
                 Contact
               </Link>
@@ -194,18 +192,18 @@ export default function Footer() {
 
           {/* Contact info */}
           <div>
-            <h3 className='text-2xl font-bold text-gray-800 mb-4'>
+            <h3 className='text-xl font-bold text-[#000000a3] mb-4'>
               Get In Touch
             </h3>
             <div className='space-y-3'>
-              <p className='text-gray-800 text-base font-medium'>
+              <p className='text-base font-medium text-[#1e1d1caa]'>
                 7827 Town Square Ave Suite 104-1167 Ofallon, MO 63368 United
                 States
               </p>
-              <p className='text-gray-800 text-base font-medium'>
+              <p className='text-base font-medium text-[#1e1d1caa]'>
                 Phone: +1 636-244-3219
               </p>
-              <p className='text-gray-800 text-base font-medium'>
+              <p className='text-base font-medium text-[#1e1d1caa]'>
                 Email: info@orangetechconsultants.com
               </p>
             </div>
@@ -215,7 +213,7 @@ export default function Footer() {
         {/* Copyright bar */}
         <div className='relative z-10 border-t border-[#331B0A]'>
           <div className='container mx-auto px-4 py-4'>
-            <p className='text-[#331B0A] text-lg font-light text-center'>
+            <p className='text-[#331B0A] text-base font-light text-center'>
               © Orange Tech Consultants 2024 | All Rights Reserved
             </p>
           </div>

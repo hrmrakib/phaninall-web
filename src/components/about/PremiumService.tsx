@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [services, setServices] = useState([
@@ -186,10 +187,129 @@ export default function Home() {
   };
 
   return (
-    <main className='container mx-auto px-4 py-12 md:py-20'>
+    <main className='container mx-auto px-4 mb-16'>
+      <div className=' px-4 sm:px-6'>
+        <div className='flex flex-col lg:flex-row gap-6 lg:py-24 lg:gap-8'>
+          {/* Left side - Images collage */}
+          <div className='lg:w-1/2 relative'>
+            <div className='relative h-full space-y-6'>
+              {/* Top left image */}
+              <div className='group w-full md:w-[312px] h-[370px] overflow-hidden rounded-3xl lg:ml-24 z-10'>
+                <Image
+                  src='/about/about-big-img.png'
+                  alt='Woman with notebook'
+                  width={700}
+                  height={700}
+                  className='object-cover w-full h-full transition-transform duration-700 group-hover:scale-110'
+                />
+              </div>
+
+              <div className='md:absolute top-10 right-6 col-span-1g items-self-center group w-[240px] h-[220px] overflow-hidden rounded-3xl z-50'>
+                <Image
+                  src='/about/about-small-img.png'
+                  alt='Woman with notebook'
+                  width={700}
+                  height={700}
+                  className='object-cover w-full h-full transition-transform duration-700 group-hover:scale-110'
+                />
+              </div>
+
+              <div className='md:absolute bottom-20 right-40 col-span-1g items-self-center group w-[240px] h-[220px] overflow-hidden rounded-3xl z-50'>
+                <Image
+                  src='/about/about-medium-img.png'
+                  alt='Woman with notebook'
+                  width={700}
+                  height={700}
+                  className='object-cover w-full h-full transition-transform duration-700 group-hover:scale-110'
+                />
+              </div>
+
+              {/* Experience box */}
+              <div className='md:absolute -bottom-32 md:left-48 transform md:-translate-x-1/2 md:-translate-y-1/2 bg-[#F26B21] text-white p-6 rounded-lg w-full md:w-[170px] h-[210px] flex flex-col justify-center items-center z-10'>
+                <h3 className='text-5xl font-bold'>15+</h3>
+                <p className='text-center mt-2'>Years Of Experience</p>
+              </div>
+
+              {/* Dotted pattern */}
+              <div className='hidden md:block absolute bottom-16 left-24 w-64 h-64 -z-50'>
+                <div className='grid grid-cols-10 gap-2'>
+                  {[...Array(200)].map((_, i) => (
+                    <div
+                      key={i}
+                      className='w-[3px] h-[3px] rounded-full bg-[#d34c31] opacity-60'
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Text content */}
+          <div className='lg:w-1/2'>
+            <div className='space-y-6'>
+              <p className='text-[#f8893f] font-medium uppercase tracking-wider'>
+                ABOUT US
+              </p>
+
+              <h1 className='text-5xl font-bold text-[#f8893f] leading-tight'>
+                Orange Tech Consultants
+              </h1>
+
+              <div className='space-y-6 text-[#727272] text-base leading-[30px]'>
+                <p>
+                  At Orange Tech Consultants, we are redefining innovation in
+                  technology services. With expertise in AI/ML, Generative AI,
+                  DevSecOps, Cloud Engineering, Data Engineering, SRE, and Full
+                  Stack Web Development, we deliver cutting-edge solutions that
+                  empower businesses to thrive in a digital- first world.
+                </p>
+
+                <p className='space-y-6 text-[#727272] text-base leading-[30px]'>
+                  Our commitment lies in helping organizations unlock their true
+                  potential through custom solutions, streamlined processes, and
+                  transformative strategies. Whether it&apos;s building scalable
+                  data pipelines, automating infrastructure, or designing secure
+                  and modern web applications, our team excels in delivering
+                  results that matter.
+                </p>
+
+                <p className='space-y-6 text-[#727272] text-base leading-[30px]'>
+                  With a focus on operational excellence, security, and
+                  scalability, we partner with clients to navigate challenges,
+                  optimize performance, and stay ahead of the curve. At Orange
+                  Tech Consultants, innovation meets execution to drive lasting
+                  success.
+                </p>
+              </div>
+
+              <div className='pt-4'>
+                <Link
+                  href='/contact'
+                  className='inline-flex items-center px-6 lg:px-7 py-3 lg:py-4 bg-[#F26B21] text-white font-medium rounded-full hover:bg-[#e05e15] transition-colors'
+                >
+                  Contact Us
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='h-5 w-5 ml-2'
+                    viewBox='0 0 20 20'
+                    fill='currentColor'
+                  >
+                    <path
+                      fillRule='evenodd'
+                      d='M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z'
+                      clipRule='evenodd'
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h1 className='text-center text-4xl md:text-5xl font-medium mb-10 md:mb-16'>
-        <span className='text-[#FF6B00]'>Our Premium</span>{" "}
-        <span className='text-[#4A4A4A]'>Services</span>
+        <span className='text-[#FF6B00]'>Our </span>{" "}
+        <span className='text-[#4A4A4A]'>Expertise</span>
       </h1>
 
       <div className='flex flex-col gap-8 md:gap-12'>

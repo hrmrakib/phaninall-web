@@ -75,8 +75,8 @@ export default function CapabilitiesSection() {
   return (
     <section className='max-w-5xl mx-auto pb-20'>
       <h2 className='text-2xl md:text-[40px] font-medium mb-8 md:mb-12 p-4  text-center'>
-        <span className='text-[#FF6B00]'>Our Capabilities &</span>{" "}
-        <span className='text-[#333333]'>Expertise</span>
+        <span className='text-[#FF6B00]'>Our Services</span>
+        {/* <span className='text-[#333333]'>Expertise</span> */}
       </h2>
 
       <div className='space-y-6'>

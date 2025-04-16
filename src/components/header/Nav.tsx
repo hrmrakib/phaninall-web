@@ -48,7 +48,7 @@ export default function Nav() {
             pathname === "/services" ? "text-[#FF6C0A]" : "text-[#000000]"
           }`}
         >
-          Our Services
+          Services
         </Link>
         <Link
           href='/capability'
