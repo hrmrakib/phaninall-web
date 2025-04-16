@@ -62,6 +62,12 @@ export default function JobCard() {
 
   return (
     <main className='container mx-auto px-4 pb-12'>
+      {!jobsData.length && (
+        <div className='flex items-center justify-center mb-8'>
+          <h2 className='text-3xl'>Currently, there are no open positions! </h2>
+        </div>
+      )}
+
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {jobsData.map((job, index) => (
           <div
