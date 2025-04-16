@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import { MobileNav } from "../header/MobileNav";
 import { Phone } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
 const Hero = () => {
