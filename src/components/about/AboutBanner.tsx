@@ -34,11 +34,11 @@ export default function ContactBanner() {
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   <div className='relative z-10'>
-                    <Image
+                    <img
                       src='/about/about-banner.svg'
                       alt='Customer Support Agent'
-                      width={700}
-                      height={700}
+                      // width={700}
+                      // height={700}
                       className='relative z-10'
                     />
                   </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
 
 interface Capability {
@@ -74,11 +74,11 @@ export default function OrganizeConsulting() {
               onClick={() => toggleExpand(capability.id)}
             >
               <div className='w-[175px] h-[120px] md:w-[175px] md:h-[120px] flex-shrink-0 rounded-md overflow-hidden mr-4 md:mr-6 group-hover:opacity-70 transition-opacity duration-300'>
-                <Image
+                <img
                   src={capability.image || "/placeholder.svg"}
                   alt={capability.title}
-                  width={480}
-                  height={480}
+                  // width={480}
+                  // height={480}
                   className='w-full h-full object-cover'
                 />
               </div>

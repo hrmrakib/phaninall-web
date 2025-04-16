@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function CareersBanner() {
   const [isHovered, setIsHovered] = useState(false);
@@ -34,7 +34,7 @@ export default function CareersBanner() {
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   <div className='relative z-10'>
-                    <Image
+                    <img
                       src='/careers/banner.svg'
                       alt='Customer Support Agent'
                       width={700}

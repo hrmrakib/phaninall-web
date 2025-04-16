@@ -92,11 +92,11 @@ export default function CapabilitiesSection() {
               onClick={() => toggleExpand(capability.id)}
             >
               <div className='w-[175px] h-[120px] md:w-[175px] md:h-[120px] flex-shrink-0 group-hover:opacity-70 rounded-md overflow-hidden mr-4 md:mr-6'>
-                <Image
+                <img
                   src={capability.image || "/placeholder.svg"}
                   alt={capability.title}
-                  width={480}
-                  height={480}
+                  // width={480}
+                  // height={480}
                   className='w-full h-full object-cover'
                 />
               </div>

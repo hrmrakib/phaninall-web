@@ -24,10 +24,10 @@ export default function ImageViewer({ image }: { image: string }) {
       <Card className='overflow-hidden'>
         <CardContent className='p-4'>
           <div className='relative aspect-video overflow-hidden rounded-md'>
-            <Image
+            <img
               src={image || "/placeholder.svg"}
               alt={image}
-              fill
+              // fill
               className='object-cover transition-transform hover:scale-105'
             />
           </div>
@@ -73,13 +73,13 @@ export default function ImageViewer({ image }: { image: string }) {
             </div>
             <div className='flex-1 flex items-center justify-center'>
               <div className='relative h-full w-full'>
-                <Image
+                <img
                   src={image || "/placeholder.svg"}
                   alt={image}
-                  fill
+                  // fill
                   className='object-contain'
-                  sizes='100vw'
-                  priority
+                  // sizes='100vw'
+                  // priority
                 />
               </div>
             </div>

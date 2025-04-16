@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { Dot } from "lucide-react";
 
 interface ServiceData {
@@ -101,11 +101,11 @@ export default function ServicesSection() {
             >
               <div className='flex items-start gap-4'>
                 <div className='w-[80px] h-[80px]'>
-                  <Image
+                  <img
                     src={service.icon || "/placeholder.svg"}
                     alt={service.title}
-                    width={24}
-                    height={24}
+                    // width={24}
+                    // height={24}
                     className='w-[80px] h-[80px]'
                   />
                 </div>

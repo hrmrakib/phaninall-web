@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { usePathname } from "next/navigation";
 import type React from "react";
 import emailjs from "@emailjs/browser";
@@ -86,7 +86,12 @@ export default function ContactUs() {
 
       <div className='relative container mx-auto flex justify-center items-center'>
         <div className='absolute left-0 z-0 p-10'>
-          <Image src='/contact.png' alt='contact' width={1000} height={1000} />
+          <img
+            src='/contact.png'
+            alt='contact'
+            // width={1000}
+            //  height={1000}
+          />
         </div>
         <div className='w-full lg:w-[1170px] lg:ml-auto flex justify-center items-center z-10'>
           <div className='bg-white rounded-3xl shadow-lg p-8 md:p-10 w-full max-w-2xl'>

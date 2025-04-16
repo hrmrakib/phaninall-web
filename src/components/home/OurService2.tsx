@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { Dot } from "lucide-react";
 import Masonry from "react-masonry-css";
 import { useState } from "react";
@@ -104,11 +104,11 @@ export default function ServicesSection2() {
                   <div className='bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transform transition-shadow'>
                     <div className='flex items-start gap-4'>
                       <div className='w-[80px] h-[80px]'>
-                        <Image
+                        <img
                           src={service.image}
                           alt={"service"}
-                          width={24}
-                          height={24}
+                          // width={24}
+                          // height={24}
                           className='w-[80px] h-[80px]'
                         />
                       </div>
@@ -167,11 +167,11 @@ export default function ServicesSection2() {
                 <div className='group bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ff6c0a57] border border-[#ff6c0a44] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow transform'>
                   <div className='flex items-start gap-4'>
                     <div className='w-[80px] h-[80px]'>
-                      <Image
+                      <img
                         src={"/service.svg"}
                         alt={"service"}
-                        width={24}
-                        height={24}
+                        // width={24}
+                        // height={24}
                         className='w-[80px] h-[80px]'
                       />
                     </div>

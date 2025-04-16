@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { Menu, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -24,11 +24,11 @@ export function MobileNav() {
           <div className='flex flex-col h-full'>
             <div className='flex items-center justify-between border-b p-4'>
               <Link href={"/"} className='flex items-center gap-2'>
-                <Image
+                <img
                   src='/logo.svg'
                   alt='Orange Tech Consultants Logo'
-                  width={40}
-                  height={40}
+                  // width={40}
+                  // height={40}
                 />
                 <span className='font-semibold'>Orange Tech</span>
               </Link>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "@/components/header/MobileNav";
@@ -16,11 +16,11 @@ export default function Nav() {
   return (
     <header className='z-0 bg-transparent container mx-auto h-[90px] xl:h-[142px] py-4 px-4 flex items-center justify-between'>
       <Link href={"/"} className='flex items-center'>
-        <Image
+        <img
           src='/logo.svg'
           alt='Orange Tech Consultants Logo'
-          width={250}
-          height={250}
+          // width={250}
+          // height={250}
           className='w-[100px] h-[42px]'
         />
       </Link>

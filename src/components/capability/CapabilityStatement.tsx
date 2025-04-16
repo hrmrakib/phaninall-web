@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useState } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -41,10 +41,10 @@ const CapabilityStatement = () => {
         </div>
 
         <div className='max-w-[772px] mx-auto relative'>
-          <Image
+          <img
             src={"/capability/statement.jpg"}
-            width={800}
-            height={1100}
+            // width={800}
+            // height={1100}
             alt='statement'
             className='rounded-2xl'
           />
@@ -109,13 +109,13 @@ const CapabilityStatement = () => {
               </div>
               <div className='flex-1 flex items-center justify-center'>
                 <div className='relative h-full w-full'>
-                  <Image
+                  <img
                     src='/capability/statement.jpg'
                     alt={"image"}
-                    fill
+                    // fill
                     className='object-contain'
-                    sizes='100vw'
-                    priority
+                    // sizes='100vw'
+                    // priority
                   />
                 </div>
               </div>

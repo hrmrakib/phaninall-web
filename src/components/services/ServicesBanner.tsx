@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function ContactBanner() {
   const [isHovered, setIsHovered] = useState(false);
@@ -36,11 +36,11 @@ export default function ContactBanner() {
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   <div className='relative z-10'>
-                    <Image
+                    <img
                       src='/contact-banner.svg'
                       alt='Customer Support Agent'
-                      width={800}
-                      height={800}
+                      // width={800}
+                      // height={800}
                       className='relative z-10'
                     />
                   </div>

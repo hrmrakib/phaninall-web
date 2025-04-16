@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -10,11 +10,11 @@ export default function Footer() {
       <div className='relative z-10 pt-4'>
         <div className='flex'>
           <div className='bg-white py-3 px-4 flex items-center justify-center w-60'>
-            <Image
+            <img
               src='/logo.svg'
               alt='Orange Tech Consultants Logo'
-              width={240}
-              height={240}
+              // width={240}
+              // height={240}
               className='h-auto w-auto'
             />
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
               </p>
               <div className='flex space-x-4'>
                 <Link
-                target="_blank"
+                  target='_blank'
                   href='https://www.linkedin.com/company/orangetechconsultants/'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
