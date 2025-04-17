@@ -90,10 +90,24 @@ const Hero = () => {
             <span className='text-[#FF6C0A]'>Orange</span> Tech <br />{" "}
             Consultants
           </h1>
-          <p className='text-lg text-black md:text-[#5A5A5A] max-w-lg'>
+
+          <div className='md:hidden absolute inset-0 flex items-center justify-center p-6'>
+            <div
+              className='p-4 rounded-lg'
+              style={{ backgroundColor: `rgba(0, 0, 0, ${0.5})` }}
+            >
+              <p className='text-white text-xl font-medium text-center'>
+                To be a trusted leader in AI-driven technology solutions that
+                enhance security, innovation, and operational excellence.
+              </p>
+            </div>
+          </div>
+
+          <p className='hidden md:block text-2xl md:text-lg text-[#000000] md:text-black max-w-lg'>
             To be a trusted leader in AI-driven technology solutions that
             enhance security, innovation, and operational excellence.
           </p>
+
           <div className='flex flex-wrap gap-4 pt-4'>
             <Button
               onClick={() => router.push("/services")}

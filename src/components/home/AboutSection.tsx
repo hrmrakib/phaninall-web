@@ -8,7 +8,7 @@ export default function AboutUs() {
       <div className='container mx-auto lg:px-4 py-12 md:py-20'>
         <div className='text-center mb-8'>
           <h1 className='text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block'>
-            <span className="text-[#080808da]">Our</span> Mission
+            <span className='text-[#080808da]'>Our</span> Mission
           </h1>
           <div className='h-1 w-16 bg-[#1A0D05] mx-auto mt-2'></div>
         </div>
@@ -25,8 +25,8 @@ export default function AboutUs() {
           <div className='relative min-h-[500px] md:min-h-[600px] lg:h-auto bg-[url("/about/about-bg.svg")] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center space-y-6 p-12'>
             {/* User Stats Card */}
             <div className='md:absolute md:top-56 md:left-4 lg:left-16 lg:top-40 w-full md:w-[264px]'>
-              <div className='relative w-auto md:w-[264px] h-[146px] bg-[#FFFFFF] flex items-center rounded-xl p-6 shadow-sm'>
-                <div className='flex flex-col'>
+              {/* <div className='relative w-auto md:w-[264px] h-[146px] bg-[#FFFFFF] flex items-center rounded-xl p-6 shadow-sm'>
+                 <div className='flex flex-col'>
                   <h3 className='text-2xl md:text-[32px] font-bold text-[#252525] mb-1.5'>
                     Our User
                   </h3>
@@ -52,15 +52,15 @@ export default function AboutUs() {
                       />
                     </svg>
                   </div>
-                </div>
-              </div>
+                </div> 
+              </div>*/}
             </div>
 
             {/* Feedback Card */}
             <div className='md:absolute md:right-4 md:top-4 lg:right-20 lg:top-16 w-full md:w-[264px] min-h-[146px] bg-[#FFFFFF] rounded-3xl p-6 shadow-sm'>
               <div className='flex flex-col items-center text-center'>
                 <h3 className='text-[32px] font-bold text-[#FF6C0A] mb-1.5'>
-                  95%
+                  100%
                 </h3>
                 <h4 className='text-2xl font-medium text-[#303030] mb-1.5'>
                   Positive Feedback
@@ -72,7 +72,7 @@ export default function AboutUs() {
             </div>
 
             {/* Experience Card */}
-            <div className='md:absolute md:right-14 md:bottom-10 lg:left-48 lg:bottom-8 w-full md:w-[264px] min-h-[146px] flex items-center justify-center bg-[#FFFFFF] rounded-3xl p-6 shadow-sm'>
+            <div className='md:absolute md:right-14 md:bottom-10 lg:left-48 lg:bottom-32 w-full md:w-[264px] min-h-[146px] flex items-center justify-center bg-[#FFFFFF] rounded-3xl p-6 shadow-sm'>
               <div className='flex items-center text-center gap-5'>
                 <h3 className='text-4xl md:text-[60px] font-bold text-[#FF6C0A] mb-2'>
                   15+
@@ -87,18 +87,18 @@ export default function AboutUs() {
           </div>
 
           <div className='space-y-6'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl text-[#080808b9] font-bold tracking-tight'>
+            <h1 className='text-4xl md:text-5xl lg:text-6xl text-center md:text-left text-[#080808b9] font-bold tracking-tight'>
               <span className='text-[#FF6C0A]'>Orange</span> Tech Consultants
             </h1>
 
-            <p className='text-[#4D3A2E] text-xl font-normal mb-6 p-2'>
+            <p className='text-[#4D3A2E] text-xl font-normal mb-6 px-5 md:px-0 p-2'>
               At Orange Tech Consultants, we redefine innovation in technology
               services. Specializing in AI/ML, Generative AI, DevSecOps, Cloud &
               Data Engineering, SRE, and Full Stack Development, we deliver
               cutting-edge solutions for a digital-first world.
             </p>
 
-            <p className='text-[#4D3A2E] text-xl font-normal mb-10 p-2'>
+            <p className='text-[#4D3A2E] text-xl font-normal mb-10 px-5 md:px-0 p-2'>
               We help businesses unlock their potential through custom
               solutions, automation, and modern web applications. With a focus
               on security, scalability, and performance, we navigate challenges
@@ -107,7 +107,7 @@ export default function AboutUs() {
 
             <Link
               href='/about'
-              className='inline-flex w-[189px] h-[50px] items-center justify-center px-6 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors'
+              className='flex w-[189px] h-[50px] mx-auto md:mx-0 text-center items-center justify-center px-6 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors'
             >
               <span className='mr-2'>Read More</span>
               <svg

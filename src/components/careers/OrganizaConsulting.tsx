@@ -18,7 +18,7 @@ export default function OrganizeConsulting() {
       id: 1,
       title: "Expert Team ",
       description:
-        "Our expert team at Orange Tech Consultants brings deep domain knowledge, hands-on experience, and a passion for solving complex challenges. With specialists across AI/ML, Generative AI, Cloud, and Full Stack Development, we deliver high-impact, innovative solutions. We stay ahead of the curve by continuously learning and applying the latest technologies. Our collaborative, client-focused approach ensures every project is aligned with your goals. Simply put, we turn expertise into results.",
+        "Our expert team at Orange Tech Consultants brings deep domain knowledge, hands-on experience, and a passion for solving complex challenges. <br /> <br /> With specialists across AI/ML, Generative AI, Cloud, and Full Stack Development, we deliver high-impact, innovative solutions. We stay ahead of the curve by continuously learning and applying the latest technologies. Our collaborative, client-focused approach ensures every project is aligned with your goals. Simply put, we turn expertise into results.",
       image: "/careers/1.png",
       expanded: false,
     },
@@ -26,7 +26,7 @@ export default function OrganizeConsulting() {
       id: 2,
       title: "Proven Track Record",
       description:
-        "Orange Tech Consultants has a proven track record of delivering successful, high-impact solutions across diverse industries. Our portfolio includes transformative projects in AI/ML, Generative AI, Cloud Engineering, and Full Stack Development. Clients trust us for our consistency, technical excellence, and ability to drive measurable results. We pride ourselves on turning complex challenges into scalable, long-term successes. Our results speak for themselves—built on innovation, reliability, and client satisfaction.",
+        "Orange Tech Consultants has a proven track record of delivering successful, high-impact solutions across diverse industries. <br /> <br /> Our portfolio includes transformative projects in AI/ML, Generative AI, Cloud Engineering, and Full Stack Development. Clients trust us for our consistency, technical excellence, and ability to drive measurable results. We pride ourselves on turning complex challenges into scalable, long-term successes. Our results speak for themselves—built on innovation, reliability, and client satisfaction.",
       image: "/careers/2.png",
       expanded: false,
     },
@@ -34,7 +34,7 @@ export default function OrganizeConsulting() {
       id: 3,
       title: "Competitive Pricing",
       description:
-        "We offer competitive pricing without compromising on quality or innovation. Our flexible engagement models are designed to fit a variety of budgets and project scopes. We focus on maximizing value, ensuring you get the most efficient and cost-effective solutions for your investment. By optimizing resources and leveraging automation, we reduce overhead while delivering top-tier results. Partnering with us means smart spending with high ROI.",
+        "We offer competitive pricing without compromising on quality or innovation. Our flexible engagement models are designed to fit a variety of budgets and project scopes. <br /> <br /> We focus on maximizing value, ensuring you get the most efficient and cost-effective solutions for your investment. By optimizing resources and leveraging automation, we reduce overhead while delivering top-tier results. Partnering with us means smart spending with high ROI.",
       image: "/careers/3.png",
       expanded: false,
     },
@@ -42,7 +42,7 @@ export default function OrganizeConsulting() {
       id: 4,
       title: "Scalability & Customization",
       description:
-        "At Orange Tech Consultants, scalability and customization are at the heart of every solution we build. We design systems that grow with your business, ensuring long-term flexibility and performance. Whether it’s AI/ML, Cloud, or Full Stack Development, our solutions are tailored to your unique needs and evolving goals. From startups to enterprise-scale operations, we adapt seamlessly to your requirements. With us, you get technology that fits—today and tomorrow.",
+        "At Orange Tech Consultants, scalability and customization are at the heart of every solution we build. We design systems that grow with your business, ensuring long-term flexibility and performance. <br /> <br /> Whether it’s AI/ML, Cloud, or Full Stack Development, our solutions are tailored to your unique needs and evolving goals. From startups to enterprise-scale operations, we adapt seamlessly to your requirements. With us, you get technology that fits—today and tomorrow.",
       image: "/careers/4.png",
       expanded: false,
     },
@@ -114,8 +114,13 @@ export default function OrganizeConsulting() {
 
             {capability.expanded && (
               <div className='px-4 pb-6 pt-2 ml-20 md:ml-26'>
-                <p className='text-[#555555] text-xl transition-opacity duration-500 ease-in-out delay-200'>
-                  {capability.description}
+                <p
+                  className='text-[#555555] text-xl transition-opacity duration-500 ease-in-out delay-200'
+                  dangerouslySetInnerHTML={{
+                    __html: capability.description,
+                  }}
+                >
+                  {/* {capability.description} */}
                 </p>
               </div>
             )}
