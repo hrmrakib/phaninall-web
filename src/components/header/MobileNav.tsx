@@ -12,15 +12,21 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className='md:hidden'>
+    <div className='md:hidden z-[100]'>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant='ghost' size='lg' className='md:hidden'>
+          <Button
+            variant='ghost'
+            size='lg'
+            className='md:hidden'
+            // onClick={() => setOpen(true)}
+          >
             <Menu className='h-6 w-6' />
             <span className='sr-only'>Toggle menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
+
+        <SheetContent side='right' className='w-[300px] sm:w-[400px] z-[101]'>
           <div className='flex flex-col h-full'>
             <div className='flex items-center justify-between border-b p-4'>
               <Link href={"/"} className='flex items-center gap-2'>
