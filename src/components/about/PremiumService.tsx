@@ -191,7 +191,7 @@ export default function Home() {
         <div className='flex flex-col lg:flex-row gap-6 lg:py-24 lg:gap-8'>
           {/* Left side - Images collage */}
           <div className='lg:w-1/2 relative'>
-            <div className='relative h-full space-y-6'>
+            <div className='hidden md:block relative h-full space-y-6'>
               {/* Top left image */}
               <div className='group w-full md:w-[312px] h-[370px] overflow-hidden rounded-3xl lg:ml-24 z-10'>
                 <img

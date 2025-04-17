@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <footer className='relative bg-[#FFF0E5]'>
       {/* Header bar */}
-      <div className='relative z-10 pt-4'>
+      <div className='relative z-10 pt-'>
         <div className='flex'>
-          <div className='bg-white py-3 px-4 flex items-center justify-center w-60'>
+          <div className='bg-transparent py-3 px-4 flex items-center justify-center w-60'>
             <img
               src='/logo2.png'
               alt='Orange Tech Consultants Logo'
@@ -23,9 +23,9 @@ export default function Footer() {
             </div>
           </div>
           <div className='bg-transparent w-4'></div>
-          <div className='bg-[#FF6C0A] py-4 px-6 flex-1'>
-            <h2 className='text-[#FFFFFF] text-xl md:text-[36px] font-bold'>
-              Orange Tech Consultants
+          <div className='hidden md:block bg-[#FF6C0A] py-4  flex-1'>
+            <h2 className='text-[#FFFFFF] text-xl text-center md:text-[36px] font-bold -ml-56'>
+              Orange <span className="text-black">Tech Consultants</span>
             </h2>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Footer() {
           {/* Useful links */}
           <div>
             <h3 className='text-xl font-bold text-[#000000a3] mb-4'>
-              Useful Link
+              Useful Links
             </h3>
             <nav className='space-y-2'>
               <Link

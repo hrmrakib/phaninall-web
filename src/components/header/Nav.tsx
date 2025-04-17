@@ -17,12 +17,16 @@ export default function Nav() {
     <header className='z-0 bg-transparent container mx-auto h-[90px] xl:h-[142px] py-4 px-4 flex items-center justify-between'>
       <Link href={"/"} className='flex items-center'>
         <img
-          src='/logo.svg'
+          src='/logo2.png'
           alt='Orange Tech Consultants Logo'
           // width={250}
           // height={250}
-          className='w-[100px] h-[42px]'
+          className='w-[55px] h-[55px]'
         />
+        <div className='ml-1'>
+          <h2 className='text-[#FF6C0A] font-semibold'>Orange </h2>
+          <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
+        </div>
       </Link>
 
       <nav className='hidden md:flex items-center space-x-8'>

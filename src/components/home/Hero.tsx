@@ -23,11 +23,13 @@ const Hero = () => {
             className='w-[55px] h-[55px]'
           />
           <div className='ml-1'>
-            <h2 className='text-[#FF6C0A] font-semibold'>Orange </h2>
-            <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
+            <h2 className='text-[#FF6C0A] font-semibold hero-title' id="title">Orange </h2>
+            <p className='text-[#FF6C0A] text-sm hero-title' id="title">
+              Tech Consultants
+            </p>
           </div>
         </Link>
-
+         
         <nav className='hidden md:flex items-center space-x-8'>
           <Link
             href='/'
@@ -78,12 +80,10 @@ const Hero = () => {
             Contact Us
           </Link>
         </nav>
-
         <div className='hidden md:flex items-center gap-2'>
           <Phone className='h-5 w-5' />
           <span className='font-medium'>+1 636-244-3219</span>
         </div>
-
         <MobileNav />
       </header>
 
