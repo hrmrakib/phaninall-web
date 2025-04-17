@@ -91,15 +91,17 @@ const Hero = () => {
             Consultants
           </h1>
 
-          <div className='md:hidden absolute inset-0 flex items-center justify-center p-6'>
-            <div
-              className='p-4 rounded-lg'
-              style={{ backgroundColor: `rgba(0, 0, 0, ${0.5})` }}
-            >
-              <p className='text-white text-xl font-medium text-center'>
-                To be a trusted leader in AI-driven technology solutions that
-                enhance security, innovation, and operational excellence.
-              </p>
+          <div className='md:hidden '>
+            <div className='md:hidden absolute inset-0 flex items-center justify-center p-6'>
+              <div
+                className='p-4 rounded-lg'
+                style={{ backgroundColor: `rgba(0, 0, 0, ${0.5})` }}
+              >
+                <p className='text-white text-xl font-medium text-center'>
+                  To be a trusted leader in AI-driven technology solutions that
+                  enhance security, innovation, and operational excellence.
+                </p>
+              </div>
             </div>
           </div>
 
