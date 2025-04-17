@@ -119,8 +119,4 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  #title {
-    @apply font-helvetica;
-  }
 }

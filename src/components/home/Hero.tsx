@@ -3,7 +3,6 @@ import { Button } from "../ui/button";
 import { MobileNav } from "../header/MobileNav";
 import { Phone } from "lucide-react";
 import Link from "next/link";
-// import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
 const Hero = () => {
@@ -23,10 +22,8 @@ const Hero = () => {
             className='w-[55px] h-[55px]'
           />
           <div className='ml-1'>
-            <h2 className='text-[#FF6C0A] font-semibold hero-title' id="title">Orange </h2>
-            <p className='text-[#FF6C0A] text-sm hero-title' id="title">
-              Tech Consultants
-            </p>
+            <h2 className='text-[#FF6C0A] font-semibold '>Orange </h2>
+            <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
           </div>
         </Link>
          
