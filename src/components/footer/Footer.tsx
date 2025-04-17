@@ -11,12 +11,16 @@ export default function Footer() {
         <div className='flex'>
           <div className='bg-white py-3 px-4 flex items-center justify-center w-60'>
             <img
-              src='/logo.svg'
+              src='/logo2.png'
               alt='Orange Tech Consultants Logo'
-              // width={240}
-              // height={240}
-              className='h-auto w-auto'
+              // width={250}
+              // height={250}
+              className='w-[55px] h-[55px]'
             />
+            <div className='ml-1'>
+              <h2 className='text-[#FF6C0A] font-semibold'>Orange </h2>
+              <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
+            </div>
           </div>
           <div className='bg-transparent w-4'></div>
           <div className='bg-[#FF6C0A] py-4 px-6 flex-1'>

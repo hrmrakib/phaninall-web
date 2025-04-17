@@ -11,17 +11,21 @@ const Hero = () => {
   const router = useRouter();
 
   return (
-    <div className='h-screen bg-[url("/hero-bg2.png")] md:bg-[url("/hero-bg.png")] bg-cover bg-center bg-no-repeat'>
+    <div className='h-screen bg-[url("/hero-bg-sm.png")] md:bg-[url("/hero-bg-lg.png")] bg-cover bg-center bg-no-repeat'>
       {/* This header is for the home page */}
       <header className='z-0 bg-transparent container mx-auto h-[90px] xl:h-[142px] py-4 px-4 flex items-center justify-between'>
         <Link href={"/"} className='flex items-center'>
           <img
-            src='/logo.svg'
+            src='/logo2.png'
             alt='Orange Tech Consultants Logo'
             // width={250}
             // height={250}
-            className='w-[100px] h-[42px]'
+            className='w-[55px] h-[55px]'
           />
+          <div className='ml-1'>
+            <h2 className='text-[#FF6C0A] font-semibold'>Orange </h2>
+            <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
+          </div>
         </Link>
 
         <nav className='hidden md:flex items-center space-x-8'>
@@ -91,21 +95,7 @@ const Hero = () => {
             Consultants
           </h1>
 
-          <div className='md:hidden '>
-            <div className='md:hidden absolute inset-0 flex items-center justify-center p-6'>
-              <div
-                className='p-4 rounded-lg'
-                style={{ backgroundColor: `rgba(0, 0, 0, ${0.5})` }}
-              >
-                <p className='text-white text-xl font-medium text-center'>
-                  To be a trusted leader in AI-driven technology solutions that
-                  enhance security, innovation, and operational excellence.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <p className='hidden md:block text-2xl md:text-lg text-[#000000] md:text-black max-w-lg'>
+          <p className='text-2xl md:text-lg text-[#000000] md:text-black max-w-lg'>
             To be a trusted leader in AI-driven technology solutions that
             enhance security, innovation, and operational excellence.
           </p>

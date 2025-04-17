@@ -31,12 +31,16 @@ export function MobileNav() {
             <div className='flex items-center justify-between border-b p-4'>
               <Link href={"/"} className='flex items-center gap-2'>
                 <img
-                  src='/logo.svg'
+                  src='/logo2.png'
                   alt='Orange Tech Consultants Logo'
-                  // width={40}
-                  // height={40}
+                  // width={250}
+                  // height={250}
+                  className='w-[55px] h-[55px]'
                 />
-                <span className='font-semibold'>Orange Tech</span>
+                <div className='ml-1'>
+                  <h2 className='text-[#FF6C0A] font-semibold'>Orange </h2>
+                  <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
+                </div>
               </Link>
               <Button
                 variant='ghost'
