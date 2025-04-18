@@ -73,7 +73,7 @@ const CapabilityStatement = () => {
         {isOpen && (
           <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 overflow-auto'>
             <div className='relative max-w-5xl w-full mx-auto'>
-              <div className='absolute top-4 right-4 z-10'>
+              <div className='absolute top-4 right-8 lg:right-4 z-10'>
                 <Button
                   size='icon'
                   variant='outline'

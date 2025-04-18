@@ -6,7 +6,8 @@ export default function JobCard() {
   function handleApply(jobId: number) {
     console.log(jobId);
     window.open(
-      `https://docs.google.com/forms/d/e/1FAIpQLSf_AHdUEusl_7dXSMOmFs_zA3-nyvmDBOd0MToqeNixCMBCiw/viewform?usp=header`,
+      `${jobId}`,
+      // `https://docs.google.com/forms/d/e/1FAIpQLSf_AHdUEusl_7dXSMOmFs_zA3-nyvmDBOd0MToqeNixCMBCiw/viewform?usp=header`,
       "_blank"
     );
   }
