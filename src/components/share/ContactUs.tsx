@@ -74,7 +74,7 @@ export default function ContactUs() {
   return (
     <div
       className={`bg-gradient-to-br from-orange-100 via-orange-50 to-orange-100 p-4 md:p-8 relative overflow-hidden ${
-        pathname === "/contact" ? "mb-28" : "my-[140px]"
+        pathname === "/contact" ? "mb-28" : "my[140px]"
       }`}
     >
       <div className='text-center mb-24'>

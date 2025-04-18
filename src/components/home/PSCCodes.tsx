@@ -69,8 +69,8 @@ export default function PSCCODES() {
   return (
     <div className='container mx-auto px-4'>
       <div className='w-full pt-[40px] pb-[3px] bg-[#FFF0E5] rounded-3xl'>
-        <h2 className='text-3xl md:text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500'>
-          PSC Codes
+        <h2 className='text-3xl md:text-4xl text-center font-bold bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500'>
+          <span className="text-[#FF6C0A]">PSC</span> Codes
           <div className='w-[60px] border-t-2 border-black mx-auto'></div>
         </h2>
         <div className='m-[40px]'>

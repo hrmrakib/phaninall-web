@@ -246,9 +246,9 @@ export default function Home() {
           {/* Right side - Text content */}
           <div className='lg:w-1/2'>
             <div className='space-y-6'>
-              <p className='text-[#f8893f] font-medium uppercase tracking-wider'>
+              {/* <p className='text-[#f8893f] font-medium uppercase tracking-wider'>
                 ABOUT US
-              </p>
+              </p> */}
 
               <h1 className='text-4xl md:text-5xl lg:text-6xl text-[#080808b9] font-bold tracking-tight'>
                 <span className='text-[#FF6C0A]'>Orange</span> Tech Consultants

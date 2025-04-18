@@ -79,8 +79,8 @@ export default function ServicesSection2() {
     <div className='bg-gradient-to-br from-[#ff6c0a00] via-[#ff6c0a00] to-[#ff6c0a00] p-4 md:p-8'>
       <div className='container mx-auto'>
         <div className='text-center mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
-            Our Services
+          <h2 className='text-3xl md:text-4xl font-bold text-black bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500 inline-block text-shadow-sm relative'>
+            <span className="text-[#FF6C0A]">Our</span> Services
             <div className='h-0.5 w-12 bg-orange-500 absolute left-1/2 transform -translate-x-1/2 bottom-0 mt-1'></div>
           </h2>
         </div>
