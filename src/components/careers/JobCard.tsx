@@ -3,14 +3,13 @@
 import { useEffect, useState } from "react";
 
 export default function JobCard() {
-  function handleApply(jobId: number) {
-    console.log({ jobId });
-    window.open(
-      `${jobId}`,
-      // `https://docs.google.com/forms/d/e/1FAIpQLSf_AHdUEusl_7dXSMOmFs_zA3-nyvmDBOd0MToqeNixCMBCiw/viewform?usp=header`,
-      "_blank"
-    );
-  }
+  function handleApply(applyLink: string) {
+      console.log({ applyLink });
+      window.open(
+        applyLink,
+        "_blank"
+      );
+    }
 
   interface Job {
     id: number;
