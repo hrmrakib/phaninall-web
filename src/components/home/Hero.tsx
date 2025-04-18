@@ -26,7 +26,7 @@ const Hero = () => {
             <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
           </div>
         </Link>
-         
+
         <nav className='hidden md:flex items-center space-x-8'>
           <Link
             href='/'
@@ -77,10 +77,12 @@ const Hero = () => {
             Contact Us
           </Link>
         </nav>
+
         <div className='hidden md:flex items-center gap-2'>
           <Phone className='h-5 w-5' />
           <span className='font-medium'>+1 636-244-3219</span>
         </div>
+
         <MobileNav />
       </header>
 
@@ -115,7 +117,7 @@ const Hero = () => {
         </div>
 
         <div>
-          <img src="hero-bg-lg2.png" alt="" />
+          <img src='hero-bg-lg2.png' alt='' />
         </div>
       </section>
     </div>
