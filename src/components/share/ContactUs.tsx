@@ -148,7 +148,7 @@ export default function ContactUs() {
                   htmlFor='email'
                   className='block text-[#4C3A2E] text-base mb-1'
                 >
-                   Email ID
+                  Email ID
                 </label>
                 <input
                   type='email'

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className='relative bg-[#FFF0E5]'>
       {/* Header bar */}
-      <div className='relative z-10 pt-'>
+      <div className='relative z-10'>
         <div className='flex'>
           <div className='bg-transparent py-3 px-4 flex items-center justify-center w-60'>
             <img
@@ -23,9 +23,9 @@ export default function Footer() {
             </div>
           </div>
           <div className='bg-transparent w-4'></div>
-          <div className='hidden md:block bg-[#FF6C0A] py-4  flex-1'>
+          <div className='hidden md:block bg-[#FF6C0A] py-4 flex-1'>
             <h2 className='text-[#FFFFFF] text-xl text-center md:text-[36px] font-bold -ml-56'>
-              Orange <span className="text-black">Tech Consultants</span>
+              Orange <span className='text-black'>Tech Consultants</span>
             </h2>
           </div>
         </div>

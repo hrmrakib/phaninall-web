@@ -10,7 +10,7 @@ const Hero = () => {
   const router = useRouter();
 
   return (
-    <div className='h-screen bg-[url("/hero-bg-sm.png")] md:bg-[url("/hero-bg-lg.png")] bg-cover bg-center bg-no-repeat'>
+    <div className='h-screen bg-[url("/hero-bg-sm2.")] md:bg-[url("/hero-bg-lg2.")] bg-cover bg-center bg-no-repeat'>
       {/* This header is for the home page */}
       <header className='z-0 bg-transparent container mx-auto h-[90px] xl:h-[142px] py-4 px-4 flex items-center justify-between'>
         <Link href={"/"} className='flex items-center'>
@@ -22,7 +22,7 @@ const Hero = () => {
             className='w-[55px] h-[55px]'
           />
           <div className='ml-1'>
-            <h2 className='text-[#FF6C0A] font-semibold '>Orange </h2>
+            <h2 className='text-[#FF6C0A] font-semibold'>Orange </h2>
             <p className='text-[#FF6C0A] text-sm'>Tech Consultants</p>
           </div>
         </Link>
@@ -85,7 +85,7 @@ const Hero = () => {
       </header>
 
       {/* This section is for the home page */}
-      <section className='container mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-8 items-center'>
+      <section className='container mx-auto px-4 py-12 md:py-0 grid md:grid-cols-2 gap-8 items-center'>
         <div className='space-y-6'>
           <h1 className='text-4xl md:text-5xl lg:text-6xl text-[#080808b9] font-bold tracking-tight'>
             <span className='text-[#FF6C0A]'>Orange</span> Tech <br />{" "}
@@ -112,6 +112,10 @@ const Hero = () => {
               Contact Us
             </Button>
           </div>
+        </div>
+
+        <div>
+          <img src="hero-bg-lg2.png" alt="" />
         </div>
       </section>
     </div>

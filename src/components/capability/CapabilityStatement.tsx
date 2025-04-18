@@ -70,30 +70,33 @@ const CapabilityStatement = () => {
       </div>
 
       <>
-        {/* <Card className='overflow-hidden'>
-          <CardContent className='p-4'>
-            <div className='relative aspect-video overflow-hidden rounded-md'>
-              <Image
-                src='/capability/statement.jpg'
-                alt={"image"}
-                fill
-                className='object-cover transition-transform hover:scale-105'
-              />
-            </div>
-          </CardContent>
-          <CardFooter className='p-4 pt-0'>
-            <Button
-              variant='outline'
-              className='w-full'
-              onClick={() => setIsOpen(true)}
-            >
-              <Eye className='mr-2 h-4 w-4' />
-              View
-            </Button>
-          </CardFooter>
-        </Card> */}
-
         {isOpen && (
+          <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 overflow-auto'>
+            <div className='relative max-w-5xl w-full mx-auto'>
+              <div className='absolute top-4 right-4 z-10'>
+                <Button
+                  size='icon'
+                  variant='outline'
+                  className='h-10 w-10 rounded-full bg-white backdrop-blur-sm'
+                  onClick={() => setIsOpen(false)}
+                >
+                  <X className='h-5 w-5' />
+                  <span className='sr-only'>Close</span>
+                </Button>
+              </div>
+
+              <div className='flex justify-center items-center min-h-screen'>
+                <img
+                  src='/capability/statement.jpg'
+                  alt='Capability Statement'
+                  className='w-full max-w-full max-h-screen object-contain rounded-lg'
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* {isOpen && (
           <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4'>
             <div className='relative h-full w-full flex flex-col'>
               <div className='absolute top-4 right-4 z-10 flex gap-2'>
@@ -108,20 +111,17 @@ const CapabilityStatement = () => {
                 </Button>
               </div>
               <div className='flex-1 flex items-center justify-center'>
-                <div className='relative h-full w-full'>
+                <div className='relative h-auto w-[50%]'>
                   <img
                     src='/capability/statement.jpg'
                     alt={"image"}
-                    // fill
-                    className='object-contain'
-                    // sizes='100vw'
-                    // priority
+                    className='object-cover'
                   />
                 </div>
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </>
     </div>
   );
