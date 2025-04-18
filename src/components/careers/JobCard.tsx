@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function JobCard() {
   function handleApply(jobId: number) {
-    console.log(jobId);
+    console.log({ jobId });
     window.open(
       `${jobId}`,
       // `https://docs.google.com/forms/d/e/1FAIpQLSf_AHdUEusl_7dXSMOmFs_zA3-nyvmDBOd0MToqeNixCMBCiw/viewform?usp=header`,
@@ -19,6 +19,7 @@ export default function JobCard() {
     job_type: string;
     salary_max: number;
     available_posts: number;
+    apply_link: string;
   }
 
   const [jobsData, setJobsData] = useState<Job[]>([]);
@@ -110,7 +111,7 @@ export default function JobCard() {
               </div>
 
               <button
-                onClick={() => handleApply(job?.id)}
+                onClick={() => handleApply(job?.apply_link)}
                 className='bg-[#FF6C0A] text-[#FFF] text-sm font-semibold px-6 py-2.5 rounded-md hover:bg-[#E05F00] transition-colors cursor-pointer'
               >
                 Apply Now
