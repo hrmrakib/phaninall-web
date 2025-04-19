@@ -35,7 +35,7 @@ export default function OrganizeConsulting() {
       title: "Competitive Pricing",
       description:
         "We offer competitive pricing without compromising on quality or innovation. Our flexible engagement models are designed to fit a variety of budgets and project scopes. <br /> <br /> We focus on maximizing value, ensuring you get the most efficient and cost-effective solutions for your investment. By optimizing resources and leveraging automation, we reduce overhead while delivering top-tier results. Partnering with us means smart spending with high ROI.",
-      image: "/careers/3.png",
+      image: "/careers/3.jpg",
       expanded: false,
     },
     {
